@@ -68,7 +68,7 @@
         </div>
     </div>
 </section>
-<!-- <section id="product-sale">
+<section id="product-sale">
     <div class="container">
         <div class="product-sale-top">
             <div class="product-sale-text">
@@ -149,7 +149,7 @@
                                 <p class="text-sale">Sale</p>
                             </div>
                             <div class="product-fruits__infos">
-                                <h2 class="tilte-name-product-t"><?= $data_sanpham1[$i]['TenSP']?></h2>
+                                <h2 class="tilte-name-product"><?= $data_sanpham1[$i]['TenSP']?></h2>
                                 <div>
                                 <span class="price-new"><?= number_format( $data_sanpham1[$i]['DonGia']) ?>đ</span>
                                 <button class="button-add-product button-add-product--view">Cho vào giỏ</button>
@@ -162,7 +162,7 @@
                 <?php } ?>
         </div>
     </div>
-</section> -->
+</section>
 <!-- <section id="populator">
     <div class="container">
         <div class="populator__head">
@@ -356,9 +356,8 @@
         <div class="populator__head">
             <div>
                 <h2 class="populator__head-title">
-                    <a href="">Gian hàng đồ khô</a>
+                    <a href="">Mẹ và bé</a>
                 </h2>
-                <p class="populator__head-desc">Sản phẩm từ đồ khô chất lượng cao</p>
             </div>
             <a href="" class="populator__head-all">
                 <p>Xem tất cả</p>
@@ -391,118 +390,6 @@
                     </form>
                 </div>
         <?php }?>
-        </div>
-    </div>
-</section>
-<section class="news">
-    <div class="container">
-        <div class="row">
-            <div class="col col-6">
-                <div class="populator__head">
-                    <div>
-                        <h2 class="populator__head-title">
-                            <a href="">Mẹo hữu ích</a>
-                        </h2>
-                        <p class="populator__head-desc">Video hữu ích nhất cho các bà nội trợ</p>
-                    </div>
-                </div>
-                <div class="news-blog-list">
-                    <div class="news-blog__base">
-                        <a href="" class="news-blog__base-link">
-                            <feature class="news-blog__base-feature">
-                                <img src="./public/images/news-base.jpg" alt="">
-                            </feature>
-                            <h2 class="news-blog__base-title text-hover">
-                                Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon
-                            </h2>
-                        </a>
-                        <p class="news-blog__base-desc">
-                            Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó. Nhưng trái cây lại là những món không có thời hạn sử dụng. Bạn có thể tham khảo những mẹo dưới đây để giúp bạn lựa chọn các loại hoa quả tươi nhất. 
-                        </p>
-                    </div>
-                    <div class="news-blog-list__new">
-                        <ul>
-                            <li>
-                                <a href="" class="text-hover">Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh</a>
-                            </li>
-                            <li>
-                                <a href="" class="text-hover">Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long</a>
-                            </li>
-                            <li>
-                                <a href="" class="text-hover">Những loại trái cây tươi tốt cho hệ tiêu hóa</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col col-6">
-                <div class="populator__head">
-                    <div>
-                        <h2 class="populator__head-title">
-                            <a href="" class="text-hover">Tin tức cập nhật</a>
-                        </h2>
-                        <p class="populator__head-desc">
-                            Vòng quanh phố phường xem tin mới nhất
-                        </p>
-                    </div>
-                </div>
-                <div class="blog-list-box">
-                    <div class="news-blog-video">
-                        <div class="news-blog-video__post">
-                            <a href="" class="news-blog-video__thumb">
-                                <img src="./public/images/news-base.jpg" alt="">
-                            </a>
-                            <div class="news-blog-video__cont">
-                                <a href="" class="blog__title text-hover">
-                                    Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon
-                                </a>
-                                <p class="news-blog__base-desc">
-                                    Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó. Nhưng trái cây lại là những món không có thời hạn sử dụng. Bạn có thể tham khảo những mẹo dưới đây để giúp bạn lựa chọn các loại hoa quả tươi nhất. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-blog-video__post">
-                            <a href="" class="news-blog-video__thumb">
-                                <img src="./public/images/news-base.jpg" alt="">
-                            </a>
-                            <div class="news-blog-video__cont">
-                                <a href="" class="blog__title text-hover">
-                                    Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon
-                                </a>
-                                <p class="news-blog__base-desc">
-                                    Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó. Nhưng trái cây lại là những món không có thời hạn sử dụng. Bạn có thể tham khảo những mẹo dưới đây để giúp bạn lựa chọn các loại hoa quả tươi nhất. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-blog-video__post">
-                            <a href="" class="news-blog-video__thumb">
-                                <img src="./public/images/news-base.jpg" alt="">
-                            </a>
-                            <div class="news-blog-video__cont">
-                                <a href="" class="blog__title text-hover">
-                                    Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon
-                                </a>
-                                <p class="news-blog__base-desc">
-                                    Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó. Nhưng trái cây lại là những món không có thời hạn sử dụng. Bạn có thể tham khảo những mẹo dưới đây để giúp bạn lựa chọn các loại hoa quả tươi nhất. 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-blog-video__post">
-                            <a href="" class="news-blog-video__thumb">
-                                <img src="./public/images/news-base.jpg" alt="">
-                            </a>
-                            <div class="news-blog-video__cont">
-                                <a href="" class="blog__title text-hover">
-                                    Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon
-                                </a>
-                                <p class="news-blog__base-desc">
-                                    Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó. Nhưng trái cây lại là những món không có thời hạn sử dụng. Bạn có thể tham khảo những mẹo dưới đây để giúp bạn lựa chọn các loại hoa quả tươi nhất. 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

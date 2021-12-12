@@ -3,7 +3,7 @@
         <div class="footer-top row">
             <div class="col col-lg-3">
                 <a href="" class="footer-top__logo">
-                    <img src="./public/images/logo.webp" alt="">
+                    <img src="./public/images/pmc-logo.png" alt="">
                 </a>
             </div>
             <div class="col col-lg-3">
@@ -63,11 +63,9 @@
                 <ul class="list-service">
                     <li><a href="">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Bánh kẹo</a></li>
-                    <li><a href="">Đồ khô</a></li>
+                    <li><a href="">Chăm sóc cá nhân</a></li>
+                    <li><a href="">Thiết bị y tế</a></li>
                     <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Hệ thống bán hàng</a></li>
-                    <li><a href="">Tin tức</a></li>
                 </ul>
             </div>
             <div class="col col-lg-2">
@@ -75,11 +73,9 @@
                 <ul class="list-service">
                     <li><a href="">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Bánh kẹo</a></li>
-                    <li><a href="">Đồ khô</a></li>
+                    <li><a href="">Chăm sóc cá nhân</a></li>
+                    <li><a href="">Thiết bị y tế</a></li>
                     <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Hệ thống bán hàng</a></li>
-                    <li><a href="">Tin tức</a></li>
                 </ul>
             </div>
             <div class="col col-lg-2">
@@ -87,11 +83,9 @@
                 <ul class="list-service">
                     <li><a href="">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Bánh kẹo</a></li>
-                    <li><a href="">Đồ khô</a></li>
+                    <li><a href="">Chăm sóc cá nhân</a></li>
+                    <li><a href="">Thiết bị y tế</a></li>
                     <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Hệ thống bán hàng</a></li>
-                    <li><a href="">Tin tức</a></li>
                 </ul>
             </div>
             <div class="col col-lg-3">
@@ -99,25 +93,22 @@
                 <ul class="list-service">
                     <li><a href="">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Bánh kẹo</a></li>
-                    <li><a href="">Đồ khô</a></li>
-                    <li><a href="">Liên hệ</a></li>
-                    <li><a href="">Hệ thống bán hàng</a></li>
-                    <li><a href="">Tin tức</a></li>
-                </ul>
+                    <li><a href="">Chăm sóc cá nhân</a></li>
+                    <li><a href="">Thiết bị y tế</a></li>
+                    <li><a href="">Liên hệ</a></li>                </ul>
                 <img src="./public/images/payment_method.webp" alt="">
             </div>
     
         </div>
         <div class="row footer-bottom">
             <div class="col col-lg-7">
-                Bản quyền thuộc về <a href="" style="color:var(--cl-green);">Nhóm 3MPRO</a> Cung cấp bởi SAPA</div>
+                Bản quyền thuộc về <a href="" style="color:var(--cl-green);">Nhóm 2MPRO</a> Cung cấp bởi SAPA</div>
             <div class="col col-lg-5 footer-nav">
                 <ul>
                     <li><a href="">Trang chủ</a></li>
                     <li><a href="">Sản phẩm</a></li>
-                    <li><a href="">Bánh kẹo</a></li>
-                    <li><a href="">Đồ khô, gạo</a></li>
+                    <li><a href="">Chăm sóc cá nhân</a></li>
+                    <li><a href="">Thiết bị y tế</a></li>
                     <li><a href="">Liên hệ</a></li>
                 </ul>
             </div>

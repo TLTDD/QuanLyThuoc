@@ -12,6 +12,7 @@
                     GROUP by sanpham.MaSP
          		    ORDER BY ThoiGian DESC limit $a,$b";
              require("result.php");
+            //  echo $query;
              return $data;  
         }
         public function sanpham($masp)
