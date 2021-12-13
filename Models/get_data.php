@@ -1,6 +1,6 @@
 <?php
     require_once("connection.php");
-    $mysqli = new mysqli("localhost","root","","webfood");
+    $mysqli = new mysqli("localhost","root","","data_medicine");
     if(isset($_POST['action'])){
         $action = $_POST['action'];
         $name = $_POST['name'];

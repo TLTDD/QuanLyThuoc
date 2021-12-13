@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="https://previews.123rf.com/images/marylia17/marylia171602/marylia17160200116/52748659-vector-organic-food-logo-fresh-fruit-logo-apple-logo-eco-natural-products-icon-isolated-identity.jpg" />
+    <link rel="icon" href="https://www.pharmacity.vn/images/empty-image.png" />
     <title>Hệ thống nhà thuốc Pharmacity | Hiệu thuốc - Nhà thuốc online</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -110,7 +110,7 @@
         }
     </script> 
 
-    <script>
+    <!-- <script>
         var options1 = {
             width: 350,
             height: 350,
@@ -119,7 +119,7 @@
             offset: {vertical: 2, horizontal: 5}
         };
         new ImageZoom(document.getElementById("product-detail-left__thumbnail"), options1);
-    </script>
+    </script> -->
 
     <script>
 

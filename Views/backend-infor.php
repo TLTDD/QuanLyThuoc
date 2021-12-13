@@ -1,7 +1,7 @@
 <?php
   
     function getKey() {
-    $link = mysqli_connect("localhost", "root", "", "webfood");
+    $link = mysqli_connect("localhost", "root", "", "data_medicine");
     if($link === false){
         echo("ERROR: Không thể kết nối. " .mysqli_connect_error());
        

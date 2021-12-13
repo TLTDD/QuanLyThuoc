@@ -123,7 +123,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="cart-content-inner__checkout">
-                                                    <a href="?act=pay" class="cart-content-inner__btn btn-checkout">Thanh toán</a >
+                                                    <a href="<?php 
+                                                        if(isset($_COOKIE['msg1'])) {
+                                                            echo '?act=pay';
+                                                        } else {
+                                                            echo '?act=taikhoan';
+                                                        }
+                                                    ?>" class="cart-content-inner__btn btn-checkout">Thanh toán</a >
                                                 </div>
                                                 <div class="cart-content-inner__checkout">
                                                     <a href="?act=cart"class="cart-content-inner__btn btn-show">Xem giỏ hàng</a>
@@ -198,8 +204,8 @@
                     
                 </ul>
             </li>
-            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=2">Chăm sóc cá nhân</a></li>
-            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=3">Thiết bị y tế</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=3">Chăm sóc cá nhân</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=8">Thiết bị y tế</a></li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="?act=">Liên hệ</a></li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="?act=">Tin tức</a></li>
         </ul>

@@ -194,8 +194,8 @@ const App = {
                 productThumbnail.src = listThumbnails[index].src
                 let stringSrc = 'url("'+ `${listThumbnails[index].src}` + '")'
                 console.log(stringSrc);
-                item('.js-image-zoom__zoomed-image').style.backgroundImage = stringSrc
-                console.log(item('.js-image-zoom__zoomed-image').style.backgroundImage);
+                // item('.js-image-zoom__zoomed-image').style.backgroundImage = stringSrc
+                // console.log(item('.js-image-zoom__zoomed-image').style.backgroundImage);
             })
         });
     },

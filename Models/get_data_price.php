@@ -1,6 +1,6 @@
 <?php
     require_once("connection.php");
-    $mysqli = new mysqli("localhost","root","","webfood");
+    $mysqli = new mysqli("localhost","root","","data_medicine");
     $danhmuc = $_POST['danhmuc'];
     if(isset($_POST['listValue'])){
         $listValue = $_POST['listValue'];

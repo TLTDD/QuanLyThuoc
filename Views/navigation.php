@@ -66,7 +66,18 @@
             require_once("cart/cart.php");
             break;
         case "pay":
-            require_once("pay.php");
+            $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+            switch ($act) {
+                case 'list':
+                    require_once("pay/pay.php");
+                    break;
+                case 'order_complete':
+                    require_once("pay/order_complete.php");
+                    break;
+                default:
+                    require_once("pay.php");
+                    break;
+            }
             break;
         default:
             require_once("error-404.php");

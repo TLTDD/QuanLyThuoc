@@ -1,7 +1,7 @@
 <?php
   
 function getKey() {
-    $link = mysqli_connect("localhost", "root", "", "webfood");
+    $link = mysqli_connect("localhost", "root", "", "data_medicine");
     if(isset($_REQUEST["term"])){
         // Chuẩn bị câu lệnh SQL SELECT
         $sql = "SELECT * FROM sanpham, hinhanh WHERE sanpham.MaSP = hinhanh.masp and TenSP LIKE ? GROUP by sanpham.MaSP";
