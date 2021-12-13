@@ -7,7 +7,7 @@
         </div>
         <ul id="sidebar_menu" class="metismenu">          
             <li>
-                <a class="has-arrow" href="#" aria-expanded="true">
+                <a class="has-arrow" href="../index.php" aria-expanded="true">
                     <div class="icon_menu">
                         <i class="fas fa-home"></i>
                         <span>Trang chủ</span>
