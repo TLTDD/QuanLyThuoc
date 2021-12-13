@@ -63,7 +63,7 @@
     overflow: hidden;
     overflow-y: auto;
     transition: 0.5s;
-    background: #5ea9f8;
+    background: #2788f0;
     box-shadow: 0 12px 30px rgb(80 143 244 / 10%);
 }
 
@@ -75,7 +75,7 @@
 
 .sidebar .logo {
     padding: 5px;
-    background: #5ea9f8;
+    background: #2788f0;
 }
 
 .sidebar .logo img {
@@ -218,4 +218,8 @@
     max-height: 42px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.align-items-center {
+    color: #2788f0;
 }
