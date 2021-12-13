@@ -3,8 +3,8 @@
     $soluong = 0;
     $thanhtien = 0;
     $countProduct = 0;
-    if(isset($_SESSION['product'])){
-    foreach ($_SESSION['product'] as $value) {
+    if(isset($_SESSION['productMe'])){
+    foreach ($_SESSION['productMe'] as $value) {
         $countProduct++;
         $soluong +=1;
         $thanhtien +=$value['ThanhTien'];
@@ -24,16 +24,16 @@
                     </div>
                     <div class="order-complete__head-right">
                         <h2>Cảm ơn bạn đã đặt hàng</h2>
-                        <p>Một email xác nhận đã được gửi tới <?=$_SESSION['login']['Email'] ?>. Xin vui lòng kiểm tra email của bạn</p>
+                        <p>Một email xác nhận đã được gửi tới <?=$_SESSION['login2']['Email'] ?>. Xin vui lòng kiểm tra email của bạn</p>
                     </div>
                 </div>
                 <div class="order-complete__content">
                     <div class="order-complete__content-left">
                         <div class="order-complete__content-infor">
                             <h2>Thông tin mua hàng</h2>
-                            <span><?=$_SESSION['login']['Ten'] ?>  <?=$_SESSION['login']['Ho']?></span>
-                            <span><?=$_SESSION['login']['Email'] ?></span>
-                            <span><?=$_SESSION['login']['SDT'] ?></span>
+                            <span><?=$_SESSION['login2']['Ten'] ?>  <?=$_SESSION['login2']['Ho']?></span>
+                            <span><?=$_SESSION['login2']['Email'] ?></span>
+                            <span><?=$_SESSION['login2']['SDT'] ?></span>
                         </div>
                         <div>
                             <h2>Phương thức thanh toán</h2>
@@ -43,9 +43,9 @@
                     <div class="order-complete__content-right">
                         <div class="order-complete__content-infor">
                             <h2>Địa chỉ nhận hàng</h2>
-                            <span><?=$_SESSION['login']['Ten'] ?> <?=$_SESSION['login']['Ho']?></span>
-                            <span><?=$_SESSION['login']['DiaChi'] ?></span>
-                            <span><?=$_SESSION['login']['SDT'] ?></span>
+                            <span><?=$_SESSION['login2']['Ten'] ?> <?=$_SESSION['login2']['Ho']?></span>
+                            <span><?=$_SESSION['login2']['DiaChi'] ?></span>
+                            <span><?=$_SESSION['login2']['SDT'] ?></span>
                         </div>
                         <div>
                             <h2>Phương thức vận chuyển</h2>

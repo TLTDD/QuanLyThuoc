@@ -123,14 +123,15 @@
                                                     </div>
                                                 </div>
                                                 <div class="cart-content-inner__checkout">
-                                                    <a href="<?php 
-                                                        if(isset($_COOKIE['msg1'])) {
+                                                    <a href="?act=pay" class="cart-content-inner__btn btn-checkout">Thanh toán</a >
+                                                </div>
+                                                <!-- <?php 
+                                                        if(isset($_COOKIE['msg2'])) {
                                                             echo '?act=pay';
                                                         } else {
                                                             echo '?act=taikhoan';
                                                         }
-                                                    ?>" class="cart-content-inner__btn btn-checkout">Thanh toán</a >
-                                                </div>
+                                                    ?> -->
                                                 <div class="cart-content-inner__checkout">
                                                     <a href="?act=cart"class="cart-content-inner__btn btn-show">Xem giỏ hàng</a>
                                                 </div>
@@ -153,13 +154,13 @@
                                         <div class="group-login">
                                         <ul class="group-login__list">
                                             <?php
-                                            if(isset($_SESSION['login'])){
+                                            if(isset($_SESSION['login2'])){
                                             ?>
-                                                <li class="group-login__list-item"><b>Chào <?=$_SESSION['login']['Ten']?></b></li>
+                                                <li class="group-login__list-item"><b>Chào <?=$_SESSION['login2']['Ten']?></b></li>
                                                 <li class="group-login__list-item"><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
                                                 <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                                 <?php
-                                                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien']) || isset($_SESSION['isLogin_GiaoHang'])){ ?>
+                                                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien']) || isset($_SESSION['isLogin2_GiaoHang'])){ ?>
                                                 <li class="group-login__list-item"><a href="admin/?mod=login">Trang quản lý</a></li>
                                                 <?php }}else{ ?>
                                                 <li class="group-login__list-item"><b>Khách hàng</b></li>

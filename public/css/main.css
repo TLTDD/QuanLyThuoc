@@ -231,10 +231,11 @@
  .cart-wrapper-content.hiddent {
     overflow-y: inherit;
  }
-.cart-wrapper-content::-webkit-scrollbar {
+ .cart-wrapper-content::-webkit-scrollbar, .pay-order-list::-webkit-scrollbar {
     width: 8px;
   }
-.cart-wrapper-content::-webkit-scrollbar-thumb {
+.cart-wrapper-content::-webkit-scrollbar-thumb,
+.pay-order-list::-webkit-scrollbar-thumb {
     background: #c1c1c1; 
     border-radius: 8px;
   }
@@ -1441,7 +1442,6 @@ div.wrapper-count {
 
 
 
-
 .pay-head {
     margin-bottom: 30px;
 }
@@ -1476,8 +1476,11 @@ li.pad-order__item {
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    margin-bottom: 10px;
 }
-
+span.pay-order__item-price {
+    padding-right: 6px;
+}
 .pay-order__head {
     padding: 0px 0 28px 0;
     border-bottom: 1px solid #ccc;
@@ -1487,6 +1490,8 @@ li.pad-order__item {
     padding: 10px 0;
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: scroll;
 }
 
 .pay-order__total-wrapper {
@@ -1503,12 +1508,13 @@ li.pad-order__item {
     justify-content: space-between;
 }
 
-a.pay-order__button-check {
+button.pay-order__button-check {
     background: var(--cl-green);
     color: #fff;
     padding: 10px 30px;
     font-size: 20px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .pad-order__item-img img {
@@ -1520,6 +1526,7 @@ a.pay-order__button-check {
 
 .pad-order__item-img {
     position: relative;
+    margin-right: 15px;
 }
 
 .count-product {
@@ -1534,4 +1541,86 @@ a.pay-order__button-check {
     border-radius: 100%;
     right: -8px;
     color: #fff;
+}
+
+.order-complete__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.order-complete__head .icon-check {
+    margin-right: 20px;
+}
+
+.order-complete__head-right h2 {
+    padding: 2px 0;
+    font-size: 20px;
+}
+
+.order-complete__content {
+    display: flex;
+    padding: 20px 15px;
+    border: 1px dashed;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+
+.order-complete__content-infor {
+    margin-bottom: 20px;
+}
+
+.order-complete__content span {
+    line-height: 1.4;
+    display: block;
+}
+
+.order-summary__wrapper {
+    background-color: #fafafa;
+    height: 200px;
+}
+
+.order-summary__head {
+    border-bottom: 4px solid;
+    padding: 8px 20px;
+}
+
+.order-summary__content div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.order-summary__content {
+    border-bottom: 4px solid;
+    padding: 20px;
+}
+.order-summary__footer  div {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+p.sum-price {
+    color: var(--cl-red);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.button-back {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+a.btn-back-home {
+    background: var(--cl-green);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+span.pad-order__item-name {
+    width: 250px;
 }

@@ -1,9 +1,8 @@
 <?php
 session_start();
-// unset($_SESSION['product']);
+// unset($_SESSION['isLogin2_Nhanvien']);
 $mod = isset($_GET['act']) ? $_GET['act'] : "home";
 switch ($mod) {
-
     case 'home':
         require_once('./Controllers/HomeController.php');
         $objCate = new homeController();
@@ -19,12 +18,11 @@ switch ($mod) {
         $objCate = new homeController();
         $objCate->list();
         break;
-
     case 'taikhoan':
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "taikhoan";
         require_once('Controllers/LoginController.php');
         $controller_obj = new LoginController();
-        if ((isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true)) {
+        if ((isset($_SESSION['isLogin2']) && $_SESSION['isLogin2'] == true)) {
             switch ($act) {
                 case 'dangxuat':
                     $controller_obj->dangxuat();
@@ -41,7 +39,7 @@ switch ($mod) {
             }
             break;
         } else {
-            if ((isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) || (isset($_SESSION['isLogin_Nhanvien']) && $_SESSION['isLogin_Nhanvien'] == true) || (isset($_SESSION['isLogin_GiaoHang']) && $_SESSION['isLogin_GiaoHang'] == true) ) {
+            if ((isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) || (isset($_SESSION['isLogin2_Nhanvien']) && $_SESSION['isLogin2_Nhanvien'] == true) || (isset($_SESSION['isLogin2_GiaoHang']) && $_SESSION['isLogin2_GiaoHang'] == true) ) {
                 switch ($act) {
                     case 'dangxuat':
                         $controller_obj->dangxuat();

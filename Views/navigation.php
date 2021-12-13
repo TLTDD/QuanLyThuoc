@@ -12,7 +12,7 @@
             break;
         case "taikhoan":
         $act = isset($_GET['xuli']) ? $_GET['xuli'] : "login";
-        if (isset($_SESSION['isLogin']) && $_SESSION['isLogin'] == true) {
+        if (isset($_SESSION['isLogin2']) && $_SESSION['isLogin2'] == true) {
             switch ($act) {
                 case 'login':
                     require_once("login.php");
@@ -25,7 +25,7 @@
                     break;
             }
         } else {
-            if ((isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) || (isset($_SESSION['isLogin_Nhanvien']) && $_SESSION['isLogin_Nhanvien'] == true)) {
+            if ((isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) || (isset($_SESSION['isLogin2_Nhanvien']) && $_SESSION['isLogin2_Nhanvien'] == true)) {
                 switch ($act) {
                     case 'login':
                         require_once("login.php");

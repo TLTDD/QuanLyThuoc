@@ -135,7 +135,7 @@ class LoginController
         else{
             $passOrinfo = "pass";
             if ($_POST['MatKhauMoi'] == $_POST['MatKhauXN']) {
-                if (md5($_POST['MatKhau']) == $_SESSION['login']['MatKhau']) {
+                if (md5($_POST['MatKhau']) == $_SESSION['login2']['MatKhau']) {
                     $data = array(
                         'MatKhau' => md5($_POST['MatKhauMoi']),
                     );

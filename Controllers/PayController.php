@@ -39,13 +39,13 @@ class PayController
 
             // print_r($city[0]['name']);
             $diachi = $city[0]['name'] .' - '. $district[0]['name'] .' - '. $wards[0]['name'] .' - '. $village[0]['name'];
-            $_SESSION['login']['DiaChi'] = $diachi;
+            $_SESSION['login2']['DiaChi'] = $diachi;
         }
         $data = array(
-            'MaND' => $_SESSION['login']['MaND'],
+            'MaND' => $_SESSION['login2']['MaND'],
             'NgayLap' => $ThoiGian,
-            'NguoiNhan' => $_SESSION['login']['Ho'].' '. $_SESSION['login']['Ten'],
-            'SDT' => $_SESSION['login']['SDT'],
+            'NguoiNhan' => $_SESSION['login2']['Ho'].' '. $_SESSION['login2']['Ten'],
+            'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
             'TongTien' => $count,
             'TrangThai'  =>  '0',

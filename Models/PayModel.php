@@ -39,7 +39,7 @@ class PayModel extends Model
         $query_mahd = "select MaHD from hoadon ORDER BY NgayLap DESC LIMIT 1";
         $data_mahd = $this->conn->query($query_mahd)->fetch_assoc();
     
-        foreach ($_SESSION['product'] as $value) {
+        foreach ($_SESSION['productMe'] as $value) {
             print_r($value);
             $MaSP =$value['MaSP'];
             $SoLuong = $value['soluong'];

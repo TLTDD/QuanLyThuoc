@@ -21,48 +21,48 @@ class Login extends Model
         $login = $this->conn->query($query)->fetch_assoc();
         if ($login !== NULL) {
             if($login['MaQuyen'] == 2){
-                $_SESSION['isLogin_Admin'] = true;
-                $_SESSION['login'] = $login;    
+                $_SESSION['isLogin2_Admin'] = true;
+                $_SESSION['login2'] = $login;    
             }else{
                 if($login['MaQuyen'] == 3){
-                $_SESSION['isLogin_Nhanvien'] = true;
-                $_SESSION['login'] = $login;
+                $_SESSION['isLogin2_Nhanvien'] = true;
+                $_SESSION['login2'] = $login;
                 }
                 else{
                     if($login['MaQuyen'] == 4){
-                    $_SESSION['isLogin_GiaoHang'] = true;
-                    $_SESSION['login'] = $login;
+                    $_SESSION['isLogin2_GiaoHang'] = true;
+                    $_SESSION['login2'] = $login;
                     }
                     else{
-                        $_SESSION['isLogin'] = true;
-                        $_SESSION['login'] = $login;
+                        $_SESSION['isLogin2'] = true;
+                        $_SESSION['login2'] = $login;
                     }
                 }
             } 
             header('Location: ?mod=login');
         } else {
-            setcookie('msg1', 'Đăng nhập không thành công', time() + 5);
+            setcookie('msg2', 'Đăng nhập không thành công', time() + 5);
             header('Location: ?act=taikhoan#dangnhap');
         }
         
     }
     function logout()
     {
-        if(isset($_SESSION['isLogin_Admin'])){
-            unset($_SESSION['isLogin_Admin']);
-            unset($_SESSION['login']);
+        if(isset($_SESSION['isLogin2_Admin'])){
+            unset($_SESSION['isLogin2_Admin']);
+            unset($_SESSION['login2']);
         }
-        if(isset($_SESSION['isLogin_Nhanvien'])){
-            unset($_SESSION['isLogin_Nhanvien']);
-            unset($_SESSION['login']);
+        if(isset($_SESSION['isLogin2_Nhanvien'])){
+            unset($_SESSION['isLogin2_Nhanvien']);
+            unset($_SESSION['login2']);
         }
-        if(isset($_SESSION['isLogin_GiaoHang'])){
-            unset($_SESSION['isLogin_GiaoHang']);
-            unset($_SESSION['login']);
+        if(isset($_SESSION['isLogin2_GiaoHang'])){
+            unset($_SESSION['isLogin2_GiaoHang']);
+            unset($_SESSION['login2']);
         }
-        if(isset($_SESSION['isLogin'])){
-            unset($_SESSION['isLogin']);
-            unset($_SESSION['login']);
+        if(isset($_SESSION['isLogin2'])){
+            unset($_SESSION['isLogin2']);
+            unset($_SESSION['login2']);
         }
         header('location: ?act=home');
     }
@@ -106,7 +106,7 @@ class Login extends Model
     }
     function account()
     {
-        $id = $_SESSION['login']['MaND'];
+        $id = $_SESSION['login2']['MaND'];
         return $this->conn->query("SELECT * from NguoiDung where MaND = $id")->fetch_assoc();
         
     }
@@ -117,7 +117,7 @@ class Login extends Model
         }
         $v = trim($v, ",");
        
-        $query = "UPDATE NguoiDung SET $v  WHERE MaND = ". $_SESSION['login']['MaND'];
+        $query = "UPDATE NguoiDung SET $v  WHERE MaND = ". $_SESSION['login2']['MaND'];
         echo $query;
         $result = $this->conn->query($query);
         

@@ -20,22 +20,22 @@
                             <fieldset class="form-group">
                                 <label>Email</label>
                                 <span class="required">*</span>
-                                <input type="email" name="taikhoan" class="form-control form-control-lg" placeholder="Email" required value="<?=$_SESSION['login']['Email'] ?>"/>
+                                <input type="email" name="taikhoan" class="form-control form-control-lg" placeholder="Email" required value="<?=$_SESSION['login2']['Email'] ?>"/>
                             </fieldset>
                             <fieldset class="form-group">
                                 <label>Họ tên</label>
                                 <span class="required">*</span>
-                                <input type="text" name="ten" class="form-control form-control-lg" placeholder="Họ tên" required value="<?=$_SESSION['login']['Ten'] ?>  <?=$_SESSION['login']['Ho']?>"/>
+                                <input type="text" name="ten" class="form-control form-control-lg" placeholder="Họ tên" required value="<?=$_SESSION['login2']['Ten'] ?>  <?=$_SESSION['login2']['Ho']?>"/>
                             </fieldset>
                             <fieldset class="form-group">
                                 <label>Số điện thoại</label>
                                 <span class="required">*</span>
-                                <input type="tel" name="SDT" class="form-control form-control-lg" placeholder="Số điện thoại" required value=" <?=$_SESSION['login']['SDT'] ?>"/>
+                                <input type="tel" name="SDT" class="form-control form-control-lg" placeholder="Số điện thoại" required value=" <?=$_SESSION['login2']['SDT'] ?>"/>
                             </fieldset>
                             <!-- <fieldset class="form-group">
                                 <label>Địa chỉ</label>
                                 <span class="required">*</span>
-                                <input type="text" name="diachi" class="form-control form-control-lg" placeholder="Địa chỉ" required value="<?=$_SESSION['login']['DiaChi'] ?>"/>
+                                <input type="text" name="diachi" class="form-control form-control-lg" placeholder="Địa chỉ" required value="<?=$_SESSION['login2']['DiaChi'] ?>"/>
                             </fieldset> -->
                             <div class="form-group">
                                 <select class="form-control city" name="city" id="select" required>
