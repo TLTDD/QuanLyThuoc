@@ -2,7 +2,7 @@
     <nav class="sidebar vertical-scroll ps-container ps-theme-default ps-active-y">
         <div class="logo d-flex justify-content-between">
             <a href="#">
-                <img src="./Public/image/logo.webp" alt=""> 
+                <img src="../public/images/pmc-logo.png" alt=""> 
             </a>
         </div>
         <ul id="sidebar_menu" class="metismenu">
