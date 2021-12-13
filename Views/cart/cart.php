@@ -27,8 +27,8 @@
             $soluong = 0;
             $thanhtien = 0;
             $countProduct = 0;
-            if(isset($_SESSION['product'])){
-            foreach ($_SESSION['product'] as $value) {
+            if(isset($_SESSION['productMe'])){
+            foreach ($_SESSION['productMe'] as $value) {
                 $countProduct++;
                 $soluong +=1;
                 $thanhtien +=$value['ThanhTien'];
@@ -36,8 +36,8 @@
         ?>
         <div class="cart-page-container" data-line="1">
         <?php
-            if (isset($_SESSION['product']) && count($_SESSION['product']) > 0) {
-                foreach ($_SESSION['product'] as $value) { ?>
+            if (isset($_SESSION['productMe']) && count($_SESSION['productMe']) > 0) {
+                foreach ($_SESSION['productMe'] as $value) { ?>
                     <div class="grid__item cart_info">
                         <a href="" class="cart-page-item-image" title="Cà chua beef túi lưới 500g">
                             <img src="./public/images/<?php echo $value['hinhanh']; ?>" alt="Cà chua beef túi lưới 500g">
@@ -75,7 +75,7 @@
             <?php }} else{?>
 
             <?php  
-                // if(count($_SESSION['product'])==0) {?>
+                // if(count($_SESSION['productMe'])==0) {?>
                 <div class="empty-cart-item">
                     <img src="./public/images/icon-empty.PNG" alt="">
                     <p>Không có sản phẩm nào trong giỏ hàng </p>

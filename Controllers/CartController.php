@@ -21,8 +21,8 @@ class CartController
         // }
 
         $count = 0;
-        if (isset($_SESSION['product'])) {
-            foreach ($_SESSION['product'] as $value) {
+        if (isset($_SESSION['productMe'])) {
+            foreach ($_SESSION['productMe'] as $value) {
                 $count += $value['ThanhTien'];
             }
         }
@@ -34,11 +34,11 @@ class CartController
         $data = $this->cart_model->detail_sp($id);
         print_r($data);
         $count = 0;
-        if (isset($_SESSION['product'][$id])) {
-            $arr = $_SESSION['product'][$id];
+        if (isset($_SESSION['productMe'][$id])) {
+            $arr = $_SESSION['productMe'][$id];
             $arr['soluong'] = $arr['soluong'] + $sl;
             $arr['ThanhTien'] = $arr['soluong'] * $arr["DonGia"];
-            $_SESSION['product'][$id] = $arr;
+            $_SESSION['productMe'][$id] = $arr;
             echo $sl;
             
         } else {
@@ -48,10 +48,10 @@ class CartController
             $arr['soluong'] = $sl;
             $arr['ThanhTien'] = $data['DonGia']*$arr['soluong'];
             $arr['hinhanh'] = $data['hinhanh'];
-            $_SESSION['product'][$id] = $arr;
+            $_SESSION['productMe'][$id] = $arr;
         }
 
-        foreach ($_SESSION['product'] as $value) {
+        foreach ($_SESSION['productMe'] as $value) {
             $count += $value['ThanhTien'];
         }
         $path = 'Location:?act=detail&sp=' .$id;
@@ -60,32 +60,32 @@ class CartController
     function update_cart()
     {   $id = $_GET['id'];
         echo $id;
-        $arr = $_SESSION['product'][$_GET['id']];
+        $arr = $_SESSION['productMe'][$_GET['id']];
         $arr['TenSP'] = $arr['TenSP'];
         $arr['soluong'] = $arr['soluong'] + 1;
         $arr['ThanhTien'] = $arr['soluong'] * $arr["DonGia"];
-        $_SESSION['product'][$_GET['id']] = $arr;
+        $_SESSION['productMe'][$_GET['id']] = $arr;
         $path = 'Location:?act=cart';
         header($path);
     }
 
     function delete_cart_item()
     {
-        $arr = $_SESSION['product'][$_GET['id']];
+        $arr = $_SESSION['productMe'][$_GET['id']];
         if ($arr['soluong'] == 1) {
-            unset($_SESSION['product'][$_GET['id']]);
+            unset($_SESSION['productMe'][$_GET['id']]);
         } else {
-            $arr = $_SESSION['product'][$_GET['id']];
+            $arr = $_SESSION['productMe'][$_GET['id']];
             $arr['soluong'] = $arr['soluong'] - 1;
             $arr['ThanhTien'] = $arr['soluong'] * $arr["DonGia"];
-            $_SESSION['product'][$_GET['id']] = $arr;
+            $_SESSION['productMe'][$_GET['id']] = $arr;
         }
         $path = 'Location:?act=cart';
         header($path);
     }
 
     function delete_cart() {
-        unset($_SESSION['product'][$_GET['id']]);
+        unset($_SESSION['productMe'][$_GET['id']]);
         $path = 'Location:?act=cart';
         header($path);
     }

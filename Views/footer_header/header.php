@@ -59,8 +59,8 @@
                                     $soluong = 0;
                                     $thanhtien = 0;
                                     $countProduct = 0;
-                                    if(isset($_SESSION['product'])){
-                                    foreach ($_SESSION['product'] as $value) {
+                                    if(isset($_SESSION['productMe'])){
+                                    foreach ($_SESSION['productMe'] as $value) {
                                         $countProduct++;
                                         $soluong +=1;
                                         $thanhtien +=$value['ThanhTien'];
@@ -72,9 +72,9 @@
                                 </a>
                                 <div class="cart-down">
                                     <div class="cart-content">
-                                        <div class="cart-wrapper-content <?php  if(!isset($_SESSION['product']) || count($_SESSION['product'])===0) echo 'hiddent'?>">
-                                            <?php if(isset($_SESSION['product']) && count($_SESSION['product']) > 0){
-                                            foreach ($_SESSION['product'] as $value) { 
+                                        <div class="cart-wrapper-content <?php  if(!isset($_SESSION['productMe']) || count($_SESSION['productMe'])===0) echo 'hiddent'?>">
+                                            <?php if(isset($_SESSION['productMe']) && count($_SESSION['productMe']) > 0){
+                                            foreach ($_SESSION['productMe'] as $value) { 
                                                 // print_r($value);
                                                 ?>
                                             <form action="" id="frm">
@@ -131,7 +131,7 @@
                                             </div>
                                             <?php } ?>
                                             <?php
-                                                if(!isset($_SESSION['product']) || count($_SESSION['product'])===0) {?>
+                                                if(!isset($_SESSION['productMe']) || count($_SESSION['productMe'])===0) {?>
                                                 <div class="cart-down-empty">
                                                     <img src="./public/images/empy-icon.PNG" alt="">
                                                     <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
