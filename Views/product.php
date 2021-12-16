@@ -27,8 +27,8 @@
                             <ul class="nav-left-category__list">
                                 <li class="category__item"><a href="">Trang chủ</a> </li>
                                 <li class="category__item"><a href="">Sản phẩm</a></li>
-                                <li class="category__item"><a href="">bánh kẹo</a></li>
-                                <li class="category__item"><a href="">Đồ khô, gạo</a></li>
+                                <li class="category__item"><a href="">Chăm sóc cá nhân</a></li>
+                                <li class="category__item"><a href="">Thiết bị y tế</a></li>
                                 <li class="category__item"><a href="">Liên hệ</a></li>
                                 <li class="category__item"><a href="">Tin tức</a></li>
                                 <li class="category__item"><a href="">Hệ thống cửa hàng</a></li>
@@ -87,14 +87,14 @@
                             </div>
                         </div>
                         <div class="nav-left__filter-product">
-                            <div class="filter-product__origin">
+                            <!-- <div class="filter-product__origin">
                                 <h1>Nguồn gốc</h1>
                                 <ul class="filter-product__origin">
                                     <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Đà lạt</a> </li>
                                     <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Nhập khẩu</a></li>
                                     <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Trong nước</a> </li>
                                 </ul>
-                            </div>
+                            </div> -->
 
                         </div>
                         <div class="nav-left__filter-product">

@@ -51,6 +51,8 @@
             margin:10,
             loop: true,
             nav:true,
+            autoplay:true,
+            autoplayTimeout:4000,
             responsive:{
                 1000:{
                     items:1

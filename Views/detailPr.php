@@ -48,21 +48,14 @@
         </div>
         <div class="col col-lg-5">
             <div class="product-detail-main">
-                <h2 class="tilte-name-product"><?php echo $data_sanpham[0]['TenSP']; ?></h2>
+                <h2 class="tilte-name-product-detail"><?php echo $data_sanpham[0]['TenSP']; ?></h2>
                 <div class="product-detail-main__price">
                     <span><?php echo number_format($data_sanpham[0]['DonGia']); ?> đ</span>
                 </div>
                 <div class="product-detail-main__desc">
-                    <div>
-                        <span>Nguồi gốc</span>
-                    <strong>
-                        <span>Đà lạt</span>
-                    </strong>
-                    </div>
-                    <div>
-                        <span>Mã sản phẩm</span>
-                        <strong>CT-01</strong>
-                    </div>
+                    <p class="product-detail-main__desc-text">
+                        <?php echo $data_sanpham[0]['desc'] ?>
+                    </p>
                 </div>
             </div>
             <form action="./Controllers/CartController.php" method="post">
@@ -96,15 +89,7 @@
         <div class="col col-lg-12">
             <div class="product_getcontent">
                 <div class="product-tab-title">
-                    <span>Chi tiết</span>
-                </div>
-                <div class="product-text-desc">
-                    <p>
-                        <strong>Chuối tiêu xanh</strong> tại Dũng Hà được lựa chọn kỹ càng, đảm bảo chuối xanh luôn tươi sạch và giữ lại hàm lượng dinh dưỡng cao nhất. Sản phẩm chuối tiêu xanh của chúng tôi, cam kết không chứa các hóa chất, chất kích thích tăng trưởng gây hại, đảm bảo an toàn cho sức khỏe người tiêu dùng. Do đó, bạn hoàn toàn có thể yên tâm khi lựa chọn mua chuối xanh cho của gia đình nhé. Món chuối xanh sẽ làm đa dạng thêm hương vị cho các món ăn của gia đình bạn đó!
-                    </p>
-                    <p>
-                        <strong>Chuối xanh làm nguyên liệu nấu ăn Chuối xanh</strong> làm nguyên liệu nấu ăn, chuối xanh tự nhiên có mùi thơm nhẹ, vỏ rất mỏng và thịt quả chắc, ngọt mát. Chuối xanh có thể chế biến thành rất nhiều món khác nhau với nhiều hương vị thơm ngon bổ dưỡng cho bữa cơm gia đình thêm ấm cúng. Công dụng giảm cân của chuối xanh Chuối xanh có vị chát và chứa nhiều chất xơ và tinh bột nên có khả năng làm loại bỏ chất béo và các tạp chất có hại khác trong cơ thể ra bên ngoài. Chính vì thế, ăn chuối xanh luộc sẽ giúp bạn giảm cân hiệu quả.  Chuối xanh tốt cho bệnh dạ dầy Chuối tiêu xanh chứa nhiều hợp chất quan trọng, giúp kích thích sự phát triển của lớp màng nhầy trong dạ dày, ngăn cản sự tấn công của dịch vị vào thành dạ dày, giúp chữa lành các vết thương từ thành ruột và dạ dày. Chuối tiêu xanh giúp điều trị bệnh loét dạ dày hiệu quả.
-                    </p>
+                    <span>Mô tả</span>
                 </div>
             </div>
         </div>

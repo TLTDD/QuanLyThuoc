@@ -486,9 +486,9 @@ li.filter-container__selected-filter-item {
 
 .nav-left__filter-head {
     padding: 10px;
-    border: dashed 1px var(--cl-green);
+    border: dashed 1px var(--cl-blue);
     margin-bottom: 20px;
-    color: var(--cl-green);
+    color: var(--cl-blue);
 }
 .nav-left__filter-head h2 {
     font-size: 22px;

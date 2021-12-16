@@ -104,6 +104,11 @@
     font-size: 14px;
     padding-bottom: 8px;
  }
+ h2.tilte-name-product-detail {
+    font-size: 24px;
+    padding-bottom: 16px;
+    font-weight: 700;
+}
  .price-name-result{
      color: var(--cl-red);
      font-size: 14px;
@@ -259,7 +264,7 @@
     display: block;
 }
 .cart-content-inner__info > a:hover {
-    color: var(--cl-orange);
+    color: var(--cl-blue);
 }
 .cart-content-inner__info-box{display: flex;justify-content: space-between;}
 .group-btn-qty{border: 1px solid #c1c1c1;}
@@ -296,14 +301,13 @@
     padding: 20px 0;
 }
 .cart-content-inner__checkout{
-    
     cursor: pointer;
 }
 .cart-content-inner__btn.btn-checkout:hover {
-    background-color: rgb(42, 202, 10);
+    background-color: rgb(15, 143, 228);
 }
 .cart-content-inner__btn.btn-show:hover {
-    background-color: #ec0b29;
+    background-color: #70ec0b;
 }
 a.cart-content-inner__btn{
     padding: 8px 0;
@@ -318,11 +322,11 @@ a.cart-content-inner__btn{
     display: block;
 }
 .cart-content-inner__btn.btn-checkout {
-    background-color: var(--cl-green);
+    background-color: var(--cl-blue);
     margin-bottom: 12px;
 }
 .cart-content-inner__btn.btn-show {
-    background-color: #ed1b36;
+    background-color: var(--cl-green);
 }
 
 /* END CART */
@@ -428,8 +432,23 @@ a.cart-content-inner__btn{
 .slider-list .owl-nav {
     display: none;
 }
-.slider-list__item {
-    
+
+section#slider button.owl-dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: rgb(134, 206, 240);
+}
+
+section#slider button.owl-dot.active {
+    background: var(--cl-blue);
+}
+
+#slider .owl-dots {
+    display: flex;
+    justify-content: center;
 }
 .slider-list__item a {
     width: 100%;
@@ -439,6 +458,14 @@ a.cart-content-inner__btn{
 .slider-list__item > a > img {
     width: 100%;
     height: 450px;
+    border-radius: 15px;
+}
+
+img.slider-banner-right {
+    width: 100%;
+    height: calc(50% - 5px);
+    border-radius: 15px;
+    padding-bottom: 10px;
 }
 
 /* CATEGORY*/
@@ -940,6 +967,8 @@ input.seed-mail::placeholder {
 #product-detail-left__thumbnail {
     margin-bottom: 20px;
     z-index: 10;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
 }
 #product-detail-left__thumbnail img{
     width: 350px;
@@ -948,7 +977,7 @@ input.seed-mail::placeholder {
  }
  .product-detail-left__list-thumb {
      position: relative;
-     border: 1px solid var(--cl-green);
+     border: 1px solid var(--cl-blue);
      padding: 5px 5px 5px 20px;
  }
 .product-detail-left__list-thumb > ul {
@@ -967,7 +996,7 @@ input.seed-mail::placeholder {
  }
 
 .product-detail-left__list-thumb > ul >li.active {
-    border: 1px solid var(--cl-green);
+    border: 1px solid var(--cl-blue);
     margin-right: 12px;
     border-radius: 8px;
 }
@@ -992,7 +1021,7 @@ input.seed-mail::placeholder {
 .product-detail-main__price{
     width: 100%;
     padding: 20px;
-    background:linear-gradient(100deg, #ed1b36, #f1975f);
+    background:linear-gradient(100deg, #1bede2, var(--cl-blue));
     border-radius: 8px;
     margin-bottom: 30px;
  }
@@ -1006,6 +1035,11 @@ input.seed-mail::placeholder {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+p.product-detail-main__desc-text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 20px;
 }
 .custom-quantity{
     margin-bottom: 20px;
@@ -1051,8 +1085,8 @@ input.seed-mail::placeholder {
      color: var(--cl-green);
  }
 .buy-now{
-    background-color: var(--cl-red);
-    border: 1px solid var(--cl-red);
+    background-color: var(--cl-blue);
+    border: 1px solid var(--cl-blue);
 }
 .buy-now:hover {
     background-color: #fff;
@@ -1085,7 +1119,7 @@ i.far.fa-heart.icon-heart-i {
     justify-content: center;
  }
  .product-tab-title span{
-    background-color: var(--cl-orange);
+    background-color: var(--cl-blue);
     padding: 12px 22px;
     font-size: 22px;
     font-weight: 600;
@@ -1624,3 +1658,5 @@ a.btn-back-home {
 span.pad-order__item-name {
     width: 250px;
 }
+
+/* ORDER_MY */
