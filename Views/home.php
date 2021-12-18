@@ -138,31 +138,30 @@
         </div>
         <div class="list-product-sale owl-carousel owl-theme" id="product-sale-slider">
             <?php 
-                for ($i = 0; $i < (count($data_sanpham1)); $i++) {
+                for ($i = 0; $i < (count($data_khuyenmai)); $i++) {
                     ?>
                     <div class="col-product__item sale-home">
                         <form action="" >
                             <div>
                             <div class="product-item__sale-off">
-                                <span class="home-product-item__percent">10%</span>
+                                <span class="home-product-item__percent"><?php echo $data_khuyenmai[$i]['GiaTriKM']; ?>%</span>
                                 <label class ="home-product-item__label" for="">Giảm</label>
                             </div>
                             <a href=""><i class="product-item-icon far fa-heart"></i></a>
                             </div>
                             <div class="product-img">
-                                <a href="?act=detail&sp=<?=$data_sanpham1[$i]['MaSP']?>" style="display: block;">
+                                <a href="?act=detail&sp=<?=$data_khuyenmai[$i]['MaSP']?>&km=<?php echo $data_khuyenmai[$i]['GiaTriKM']; ?>" style="display: block;">
                                     <span class ="img--hover"></span> 
-                                    <img src="./public/images/<?php echo $data_sanpham1[$i]['hinhanh'] ?>" alt="">
+                                    <img src="./public/images/<?php echo $data_khuyenmai[$i]['hinhanh'] ?>" alt="">
                                 </a>
                                 <p class="text-sale">Sale</p>
                             </div>
                             <div class="product-fruits__infos">
-                                <h2 class="tilte-name-product"><?= $data_sanpham1[$i]['TenSP']?></h2>
+                                <h2 class="tilte-name-product"><?= $data_khuyenmai[$i]['TenSP']?></h2>
                                 <div>
-                                <span class="price-new"><?= number_format( $data_sanpham1[$i]['DonGia']) ?>đ</span>
+                                <span class="price-new"><?= number_format( $data_khuyenmai[$i]['DonGia']) ?>đ</span>
                                 <button class="button-add-product button-add-product--view">Cho vào giỏ</button>
-                                <span class="price-old"><?php echo number_format($data_sanpham1[$i]['DonGia']+ 20000) ?>đ</span>
-
+                                <span class="price-old"><?php echo number_format($data_khuyenmai[$i]['DonGia']+ 20000) ?>đ</span>
                                 </div>
                             </div>
                         </form>

@@ -49,6 +49,31 @@ const App = {
             }
         })
 
+
+        // Load more description product details
+
+        const btnLoadMore = item('.btn-view-more')
+        const contentDesc = item('.product-tab-desc__element')
+        btnLoadMore.addEventListener('click', function(){
+            console.log('daclick load more');
+            contentDesc.classList.toggle('product-tab-desc')
+            if(!contentDesc.classList.contains('product-tab-desc')){
+                btnLoadMore.innerText = 'Thu gọn'
+            }else {
+                btnLoadMore.innerText = 'Xem thêm'
+            }
+        })
+        /* Change password js */
+        var checkbox = document.getElementById("radio-changePass")
+        if(checkbox!=null) {
+            checkbox.addEventListener("change", function(){
+                var container_inforC
+                hange_show = document.getElementsByClassName("container-inforChange--show");
+                container_inforChange_show.style = "hidden"; 
+            })
+        }
+
+        // click to top
         item('.box-button-top').addEventListener("click", function() {
             rootElement.scrollTo({
                 top: 0,
@@ -280,15 +305,6 @@ const App = {
  
 App.start()
 
-/* Change password js */
-var checkbox = document.getElementById("radio-changePass")
-  
-    checkbox.onchange = function()
-    {
-        var container_inforC
-        hange_show = document.getElementsByClassName("container-inforChange--show");
-        container_inforChange_show.style = "hidden"; 
-    }
 
 
 

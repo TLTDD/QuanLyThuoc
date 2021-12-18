@@ -62,6 +62,9 @@
         case "detail":
             require_once("detailPr.php");
             break;
+        case 'orderMy':
+            require_once("orderMy.php");
+            break;
         case'cart':
             require_once("cart/cart.php");
             break;

@@ -12,12 +12,24 @@
                     GROUP by sanpham.MaSP
          		    ORDER BY ThoiGian DESC limit $a,$b";
              require("result.php");
-            //  echo $query;
              return $data;  
+        }
+        function sanpham_khuyenmai() {
+            $query = "SELECT * FROM khuyenmai, sanpham,hinhanh WHERE khuyenmai.MaKM = sanpham.MaKM and khuyenmai.GiaTriKM != 0 AND sanpham.MaSP = hinhanh.masp
+            GROUP by sanpham.MaSP";
+            // echo $query;
+            require("result.php");
+            return $data;
         }
         public function sanpham($masp)
         {
             $query ="SELECT * from sanpham,hinhanh where sanpham.MaSP = hinhanh.masp and sanpham.MaSP = '$masp'";
+            require("result.php");
+            return $data;
+        }
+        public function sanpham_km($masp)
+        {
+            $query ="SELECT * from sanpham,hinhanh,khuyenmai where sanpham.MaSP = hinhanh.masp and khuyenmai.MaKM = sanpham.MaKM and sanpham.MaSP = '$masp'";
             require("result.php");
             return $data;
         }

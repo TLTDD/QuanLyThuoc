@@ -83,6 +83,18 @@ switch ($mod) {
         $objCate = new ProductController();
         $objCate->list();
         break;
+    case 'orderMy': 
+        $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
+        require_once('./Controllers/OrderMyController.php');
+        $objOrder = new OrderMyController();
+        switch ($act) {
+            case 'list':
+                $objOrder->list_order();
+                break;
+            case 'delete-order':
+                $objOrder->deteteHoaDon();
+                break;
+        }
     case 'cart':
             $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
             $sl = isset($_GET['sl']) ? $_GET['sl'] : 1;
