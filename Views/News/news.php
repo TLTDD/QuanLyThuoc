@@ -32,35 +32,30 @@
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="?act=product&cate=3">Đồ khô, Gạo
+                                                <a class="nav-link" href="?act=product&cate=3">Chăm sóc cá nhân</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="?act=product&cate=4#">Sản phẩm tiện lợi
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">Gia vị, dầu ăn
+                                                <a class="nav-link" href="?act=product&cate=7">Mẹ và bé</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="?act=product&cate=8">Thiết bị y tế</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Sản phẩm phòng dịch</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="?act=product&cate=6">Rau củ quả
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="?act=product&cate=2">Bánh kẹo
-                                                </a>
+                                                <a class="nav-link" href="#">Thực phẩm chức năng</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">Mì, cháo, phở
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Nước giải khát
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="?act=product&cate=1">Rau củ quả
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Sữa uống
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#">Đồ đông lạnh
+                                                <a class="nav-link" href="#">Dược phẩm
                                                 </a>
                                             </li>
                                             <li class="dropdown-submenu nav-item">
@@ -84,8 +79,8 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="?act=product&cate=2">Bánh kẹo</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="?act=product&cate=3">Đồ khô, Gạo</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="?act=product&cate=6">Sản phẩm phòng dịch</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="?act=product&cate=8">Thiết bị y tế</a></li>
                                     <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
                                     <li class="nav-item">
                                         <a href="#" class="nav-link active">
@@ -119,7 +114,7 @@
                                 </a>
                             </div>
                             <div class="name-right">
-                                <h3><a href="#" title="Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon">Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon</a></h3>
+                                <h3><a href="#" title="Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon">Ăn nhiều rau tốt cho sức khỏe mọi người</a></h3>
                             </div>
                         </div>
                         <div class="loop-blog">
@@ -129,7 +124,7 @@
                                 </a>
                             </div>
                             <div class="name-right">
-                                <h3><a href="#" title="Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh">Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh</a></h3>
+                                <h3><a href="#" title="Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh">Làm Detox từ hoa quả tươi tốt cho hệ tiêu hóa</a></h3>
                             </div>
                         </div>
                         <div class="loop-blog">
@@ -139,7 +134,7 @@
                                 </a>
                             </div>
                             <div class="name-right">
-                                <h3><a href="#" title="Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long">Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long</a></h3>
+                                <h3><a href="#" title="Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long">Tổng hợp cách làm các loại nước ép tốt cho sức khỏe</a></h3>
                             </div>
                         </div>
                         <div class="loop-blog">
@@ -164,25 +159,23 @@
                 <div class="col-12 col-md-12 col-12">
                     <div class="item_blog_base">
                         <a href="javascript:;" data-video="https://www.youtube.com/embed/HH3YEADdlt8" class="video_play thumb" data-toggle="modal" data-target="#myModalYoutube" title="Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon">
-                            <img src="//bizweb.dktcdn.net/100/439/653/articles/156532673371-8682422-1.jpg?v=1634270986530" data-src="//bizweb.dktcdn.net/100/439/653/articles/156532673371-8682422-1.jpg?v=1634270986530" alt="Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon" class="lazyload img-responsive loaded" data-was-processed="true">
+                            <img src="https://vinmec-prod.s3.amazonaws.com/images/20200714_164920_904796_20191019_072547_33018.max-800x800.jpg" data-src="https://vinmec-prod.s3.amazonaws.com/images/20200714_164920_904796_20191019_072547_33018.max-800x800.jpg">
                         </a>
                         <div class="content_blog clearfix">
-                            <h3><a href="#" title="Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon" class="a-title">Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon</a></h3>
-                            <p>Mẹo giúp chọn một số hoa quả nhập khẩu tươi ngon. 
-                                Khi bạn mua những sản phẩm được sản xuất tại nhà máy, thường sẽ có thời hạn để bạn kiểm tra trước khi quyết định chi tiền để mua món sản phẩm đó...</p>
+                            <h3><a href="#" class="a-title">Carbohydrate và sức khỏe con người</a></h3>
+                            <p>Carbohydrate là chất bột đường luôn được khuyến nghị cắt giảm nếu thực hiện chế độ ăn giảm cân. Điều này dẫn đến lầm tưởng về carbohydrate là “kẻ thù” của cân nặng. Tuy nhiên, nó không “xấu” như chúng ...</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-12">
                     <div class="item_blog_base">
                         <a href="javascript:;" data-video="https://www.youtube.com/embed/HEx9P0SG3pg" class="video_play thumb" data-toggle="modal" data-target="#myModalYoutube" title="Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh">
-                            <img src="//bizweb.dktcdn.net/100/439/653/articles/cong-thuc-lam-nuoc-detox-giam-can-thanh-loc-co-the-202006011058550652.jpg?v=1634270295483" data-src="//bizweb.dktcdn.net/100/439/653/articles/cong-thuc-lam-nuoc-detox-giam-can-thanh-loc-co-the-202006011058550652.jpg?v=1634270295483" alt="Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh" class="lazyload img-responsive loaded" data-was-processed="true">
+                            <img src="https://vinmec-prod.s3.amazonaws.com/images/20210304_030549_548695_tieu-duong-an-qua-bo-.max-800x800.jpg" data-src="https://vinmec-prod.s3.amazonaws.com/images/20210304_030549_548695_tieu-duong-an-qua-bo-.max-800x800.jpg" >
                         </a>
                         <div class="content_blog clearfix">
-                            <h3><a href="#" title="Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh" class="a-title">Làm Detox từ hoa quả tươi sẵn có trong những ngày lạnh</a></h3>
+                            <h3><a href="#"  class="a-title">Ăn thế nào để hỗ trợ hệ thống miễn dịch của bạn?</a></h3>
                             <p>
-                                Làm detox nhẹ bụng từ hoa quả tươi cho những ngày Tết. 
-                                Các món ăn trong dịp Tết của người Việt Nam đều rất ngon vì thế chúng ta thường ăn rất nhiều. Nhất là trong những ngày nghỉ Tết, chúng ta s...
+                            Hệ thống miễn dịch có vai trò bảo vệ tự nhiên sức khoẻ con người trước sự xâm nhập các tác nhân như: virus, vi khuẩn, ký sinh trùng, nấm. Đồng thời, hệ thống miễn dịch cũng giúp phục hồi ...
                             </p>	
                         </div>
                     </div>
@@ -190,12 +183,12 @@
                 <div class="col-12 col-md-12 col-12">
                     <div class="item_blog_base">
                         <a class="thumb" href="#" title="Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long">
-                            <img src="//bizweb.dktcdn.net/100/439/653/articles/hvr1knrcxpnwyppvjhu9g30qawln5aun6mp.jpg?v=1634270197660" data-src="//bizweb.dktcdn.net/100/439/653/articles/hvr1knrcxpnwyppvjhu9g30qawln5aun6mp.jpg?v=1634270197660" alt="Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long" class="lazyload img-responsive loaded" data-was-processed="true">
+                            <img src="https://vinmec-prod.s3.amazonaws.com/images/20201125_031231_178776_Thuoc_Actos.max-800x800.jpg" data-src="https://vinmec-prod.s3.amazonaws.com/images/20201125_031231_178776_Thuoc_Actos.max-800x800.jpg" >
                         </a>
                         <div class="content_blog clearfix">
-                            <h3><a href="#" title="Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long" class="a-title">Tổng hợp cách làm các loại nước ép và bánh mì từ quả thanh long</a></h3>
+                            <h3><a href="#" class="a-title">Thuốc Actos: Công dụng, chỉ định và lưu ý khi dùng</a></h3>
                             <p>
-                                    Thanh long – loại quả được trồng rất nhiều ở cả 3 miền đất nước, cứ mỗi mùa thu hoạch lại cho năng suất lớn. Ngoài ăn thanh long tươi, chúng ta còn có thể dùng thanh long để làm rất nhiều món quà ...
+                            Actos là một loại thuốc điều trị tiểu đường được kê theo đơn có thương hiệu. Thuốc Actos được Cục Quản lý Thực phẩm và Dược (FDA) chấp thuận để giúp kiểm soát lượng đường trong máu ở người lớn ...
                             </p>
                         </div>
                     </div>
@@ -203,12 +196,12 @@
                 <div class="col-12 col-md-12 col-12">
                     <div class="item_blog_base">
                         <a class="thumb" href="#" title="Những loại trái cây tươi tốt cho hệ tiêu hóa">								
-                            <img src="//bizweb.dktcdn.net/100/439/653/articles/khay-trai-cay.jpg?v=1634270082513" data-src="//bizweb.dktcdn.net/100/439/653/articles/khay-trai-cay.jpg?v=1634270082513" alt="Những loại trái cây tươi tốt cho hệ tiêu hóa" class="lazyload img-responsive loaded" data-was-processed="true">								
+                            <img src="https://vinmec-prod.s3.amazonaws.com/images/20211106_134338_248917_cho-be-an-gi-khi-bi-t.max-800x800.jpg" data-src="https://vinmec-prod.s3.amazonaws.com/images/20211106_134338_248917_cho-be-an-gi-khi-bi-t.max-800x800.jpg">								
                         </a>
                         <div class="content_blog clearfix">
-                            <h3><a href="#" title="Những loại trái cây tươi tốt cho hệ tiêu hóa" class="a-title">Những loại trái cây tươi tốt cho hệ tiêu hóa</a></h3>
+                            <h3><a href="#" class="a-title">Bé vừa khỏi tiêu chảy, nên ăn gì cho tốt?</a></h3>
                             <p>
-                                    Có thể bạn chưa biết, sức khỏe của hệ tiêu hóa có ảnh hưởng rất lớn đến toàn bộ cơ thể, đặc biệt là tinh thần và trí não. Và trái cây tươi chính là thực phẩm vàng cho hệ tiêu hóa luôn hoạt động hi...
+                            Trẻ bị tiêu chảy kéo dài dễ dẫn đến tình trạng mất nước, gây mệt mỏi, biếng ăn, sụt cân, thậm chí là suy dinh dưỡng nếu phụ huynh không biết cách chăm sóc trẻ kịp thời. Vì vậy việc ...    
                             </p>
                         </div>
                     </div>
