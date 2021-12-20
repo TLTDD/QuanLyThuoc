@@ -208,8 +208,8 @@
             </li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=3">Chăm sóc cá nhân</a></li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=8">Thiết bị y tế</a></li>
-            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=">Liên hệ</a></li>
-            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=">Tin tức</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=contact">Liên hệ</a></li>
+            <li class="nav-list__item"><a class="nav-list__item-link" href="?act=news">Tin tức</a></li>
         </ul>
     </div>
 </nav>

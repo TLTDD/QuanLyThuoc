@@ -508,3 +508,13 @@ h1#product-list__title__h1 {
 .title-name-result--false{
     color: red;
 }
+.label_input{
+    margin: 20px;
+}
+.label_title{
+    padding: 3px;
+}
+.btn{
+    width: 50px;
+    margin: 20px;
+}

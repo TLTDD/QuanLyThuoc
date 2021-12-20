@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./public/css/reset.css">
     <link rel="stylesheet" href="./public/css/product.css">
     <link rel="stylesheet" href="./public/css/login.css">
+    <link rel="stylesheet" href="./public/css/news.css">
     <!-- Lib -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/js-image-zoom@0.7.0/js-image-zoom.js" type="application/javascript"></script>

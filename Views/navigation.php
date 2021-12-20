@@ -82,6 +82,12 @@
                     break;
             }
             break;
+        case "news":
+            require_once("News/news.php");
+            break;
+        case "contact":
+                require_once("contact.php");
+                break;
         default:
             require_once("error-404.php");
         break;
