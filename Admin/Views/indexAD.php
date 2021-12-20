@@ -37,7 +37,7 @@
         <div class="card-body">
           <div class="table-responsive">
             <?php
-                if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) {
+                if (isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) {
                   $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";
                   $act = isset($_GET['act']) ? $_GET['act'] : "admin"; 
                   switch ($mod) {
@@ -155,7 +155,7 @@
    
               }
               else {
-                  if (isset($_SESSION['isLogin_Nhanvien']) && $_SESSION['isLogin_Nhanvien'] == true) {
+                  if (isset($_SESSION['isLogin2_Nhanvien']) && $_SESSION['isLogin2_Nhanvien'] == true) {
                     $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";
                     $act = isset($_GET['act']) ? $_GET['act'] : "admin";
                     switch ($mod) {
@@ -250,7 +250,7 @@
                      
                   }
                   else{
-                    if (isset($_SESSION['isLogin_GiaoHang']) && $_SESSION['isLogin_GiaoHang'] == true) {
+                    if (isset($_SESSION['isLogin2_GiaoHang']) && $_SESSION['isLogin2_GiaoHang'] == true) {
                       $mod = isset($_GET['mod']) ? $_GET['mod'] : "login";
                       $act = isset($_GET['act']) ? $_GET['act'] : "admin";
                       switch ($mod) {

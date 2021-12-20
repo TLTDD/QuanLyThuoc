@@ -26,7 +26,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=sanpham" aria-expanded="true">
                         <div class="icon_menu">
@@ -37,7 +37,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=loaisanpham" aria-expanded="true">
                         <div class="icon_menu">
@@ -48,7 +48,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=bill" aria-expanded="true">
                         <div class="icon_menu">
@@ -59,7 +59,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=category" aria-expanded="true">
                         <div class="icon_menu">
@@ -70,7 +70,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_Admin']) || isset($_SESSION['isLogin_Nhanvien'])){ ?>
+                if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=khuyenmai" aria-expanded="true">
                         <div class="icon_menu">
@@ -81,7 +81,7 @@
                 </li>
             <?php } ?>
             <?php
-                if(isset($_SESSION['isLogin_GiaoHang'])){ ?>
+                if(isset($_SESSION['isLogin2_GiaoHang'])){ ?>
                 <li>
                     <a class="has-arrow" href="?mod=order" aria-expanded="true">
                         <div class="icon_menu">
