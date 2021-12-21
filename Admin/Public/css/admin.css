@@ -223,3 +223,9 @@
 .align-items-center {
     color: #2788f0;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: #2788f0 !important;
+    border-color: #2788f0 !important;
+}
