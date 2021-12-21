@@ -1,8 +1,22 @@
 <main id="order-my">
     <div class="container">
+        <div class="break-crumb">
+            <div class="break-crumb__head">
+                <div class="home">
+                    <a href="#">
+                        <span>Trang chủ</span>
+                    </a>
+                        <span class="mr_lr">&nbsp;/ &nbsp;</span>
+                </div>
+                <div>
+                    <strong>
+                        <span>Đơn hàng</span>
+                    </strong>
+                </div>
+            </div>
+        </div>
         <div class="order-my__head">
             <h2 style="font-size:26px; margin-bottom: 20px;">Đơn hàng của bạn</h2>
-
             <div class="table-all">
                 <table class="table table-cart table-order" id="my-orders-table">
                     <thead class="thead-default">
@@ -20,7 +34,9 @@
                         <?php if(count($data_hoadon) >0) {
                             foreach($data_hoadon as $item) { ?>
                             <tr>
-                                <th><?= $item['MaHD']?></th>
+                                <th>
+                                    <a href="?act=orderMy&xuli=order-detail&maHD=<?= $item['MaHD']?>"><?= $item['MaHD']?></a>
+                                </th>
                                 <th><?= $item['NgayLap']?></th>
                                 <th><?= $item['DiaChi']?></th>
                                 <th><?php echo number_format($item['TongTien'])?> đ</th>

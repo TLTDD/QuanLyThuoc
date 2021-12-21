@@ -32,7 +32,6 @@ class PayModel extends Model
         $f = trim($f, ",");
         $v = trim($v, ",");
         $query = "INSERT INTO HoaDon($f) VALUES ($v);";
-        echo $query;
         $status = $this->conn->query($query);
         echo 'day la'.$status;
     

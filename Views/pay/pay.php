@@ -65,6 +65,10 @@
                                     <option value="">Thôn</option>
                                 </select>
                             </div>
+                            <fieldset class="form-group">
+                                <label>Ghi chú</label>
+                                <input type="text" name="ghichu" class="form-control form-control-lg" placeholder="Ghi chú" value=""/>
+                            </fieldset>
                         </div>
                     </div>
                 </div>

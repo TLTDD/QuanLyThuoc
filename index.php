@@ -94,7 +94,10 @@ switch ($mod) {
             case 'delete-order':
                 $objOrder->deteteHoaDon();
                 break;
-        }
+            case 'order-detail':
+                $objOrder->orderDetail();
+                break;
+        }break;
     case 'cart':
             $act = isset($_GET['xuli']) ? $_GET['xuli'] : "list";
             $sl = isset($_GET['sl']) ? $_GET['sl'] : 1;

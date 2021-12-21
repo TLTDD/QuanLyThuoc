@@ -27,8 +27,8 @@
                             <ul class="nav-left-category__list">
                                 <li class="category__item"><a href="">Trang chủ</a> </li>
                                 <li class="category__item"><a href="">Sản phẩm</a></li>
-                                <li class="category__item"><a href="">Chăm sóc cá nhân</a></li>
-                                <li class="category__item"><a href="">Thiết bị y tế</a></li>
+                                <li class="category__item"><a href="">bánh kẹo</a></li>
+                                <li class="category__item"><a href="">Đồ khô, gạo</a></li>
                                 <li class="category__item"><a href="">Liên hệ</a></li>
                                 <li class="category__item"><a href="">Tin tức</a></li>
                                 <li class="category__item"><a href="">Hệ thống cửa hàng</a></li>
@@ -86,17 +86,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-left__filter-product">
-                            <!-- <div class="filter-product__origin">
-                                <h1>Nguồn gốc</h1>
-                                <ul class="filter-product__origin">
-                                    <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Đà lạt</a> </li>
-                                    <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Nhập khẩu</a></li>
-                                    <li class="filter-origin__item"><a href=""><i class="fas swich-icon fa-toggle-on fa-toggle-off"></i> Trong nước</a> </li>
-                                </ul>
-                            </div> -->
-
-                        </div>
+                        
                         <div class="nav-left__filter-product">
                             <div class="filter-product__price">
                                 <h1>Theo mức giá</h1>
@@ -197,6 +187,12 @@
                             </div>
 
                         </div>
+                        <div class="nav-left__filter-product">
+                            
+
+                        </div>
+
+
                     </div>
                     <div class="product-list col-lg-9" >
                         <div class="container">
@@ -212,31 +208,40 @@
                                 if($data_sanpham != NULL)
                                 {   
                                     for($i = 0;$i<$count; $i++){
-                                       
+                                        if ($data_sanpham[$i]['GiaTriKM'] == 0) {
+                                            $status = "product-item__sale-off--none";
+                                            $km = "no";
+                                            $makm = "";
+                                        }
+                                        else {
+                                            $status = "";
+                                            $makm = "&km=" .$data_sanpham[$i]['MaSP'];
+                                        }
                                         ?>
                                     
-                                    <div class="col-product__item col col-md-4 col-lg-4">
+                                    <div class="col-product__item col col-md-4 col-lg-4 <?= $status ?>">
                                         <form action="" >
                                             <div>
                                         <div class="product-item__sale-off">
-                                                <span class="home-product-item__percent">10%</span>
-                                                <label class ="home-product-item__label" for="">Giảm</label>
+                                            <span class="home-product-item__percent"><?= $data_sanpham[$i]['GiaTriKM'];?>%</span>
+                                            <label class ="home-product-item__label" for="">Giảm</label>
                                         </div>
                                         <a href=""><i class="product-item-icon far fa-heart"></i></a>
                                         </div>
                                             <div class="product-img">
-                                                <a href="?act=detail&sp=<?=$data_sanpham[$i]['MaSP']?>" style="display: block;">
+                                                <a href="?act=detail&sp=<?=$data_sanpham[$i]['MaSP']?><?= $makm ?>" style="display: block;">
                                                     <span class ="img--hover"></span> 
                                                     <img src="./public/images/<?php echo $data_sanpham[$i]['hinhanh'] ?>" alt="">
                                                 </a>
+                                                <p class="text-sale <?= $status ?>">Sale</p>
                                             </div>
                                             <div class="product-fruits__infos">
                                                 <h2 class="tilte-name-product-t"><?= $data_sanpham[$i]['TenSP']?></h2>
                                                 <div>
                                                 <span class="price-new"><?= number_format( $data_sanpham[$i]['DonGia']) ?>đ</span>
-                                                <button class="button-add-product button-add-product--view">Cho vào giỏ</button>
-                                                <span class="price-old"><?php echo number_format($data_sanpham[$i]['DonGia']+ 20000) ?>đ</span>
-                
+                                                <a href="?act=cart&xuli=add&id=<?=$data_sanpham[$i]['MaSP']?>" 
+                                                class="button-add-product button-add-product--view btn-add-cart">Cho vào giỏ</a>
+                                                <span class="price-old <?= $status ?>"><?php echo number_format($data_sanpham[$i]['giaCu']) ?>đ</span>
                                                 </div>
                                             </div>
                                         </form>
@@ -262,9 +267,6 @@
 
 
     </div>
-
-
     </div>
-
 </section>
 

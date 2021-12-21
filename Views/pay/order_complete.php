@@ -80,7 +80,10 @@
         </div>
 
         <div class="button-back">
-            <a href="?act=home" class="btn-back-home">Tiếp tục mua hàng</a>
+            <a href="<?php 
+              unset($_SESSION['productMe']);
+              echo '?act=home'
+            ?>"" class="btn-back-home">Tiếp tục mua hàng</a>
         </div>
     </div>
 </main>

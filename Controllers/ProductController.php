@@ -29,6 +29,4 @@ require_once("./Models/productModel.php");
 
     }
        
-      
-    
 ?>

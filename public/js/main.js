@@ -54,15 +54,17 @@ const App = {
 
         const btnLoadMore = item('.btn-view-more')
         const contentDesc = item('.product-tab-desc__element')
-        btnLoadMore.addEventListener('click', function(){
-            console.log('daclick load more');
-            contentDesc.classList.toggle('product-tab-desc')
-            if(!contentDesc.classList.contains('product-tab-desc')){
-                btnLoadMore.innerText = 'Thu gọn'
-            }else {
-                btnLoadMore.innerText = 'Xem thêm'
-            }
-        })
+        if(btnLoadMore!=null) {
+            btnLoadMore.addEventListener('click', function(){
+                console.log('daclick load more');
+                contentDesc.classList.toggle('product-tab-desc')
+                if(!contentDesc.classList.contains('product-tab-desc')){
+                    btnLoadMore.innerText = 'Thu gọn'
+                }else {
+                    btnLoadMore.innerText = 'Xem thêm'
+                }
+            })
+        }
         /* Change password js */
         var checkbox = document.getElementById("radio-changePass")
         if(checkbox!=null) {
@@ -249,7 +251,7 @@ const App = {
                 }).showToast();
                 setTimeout(function(){
                     window.location.href = btnAddCart.href
-                },2000)
+                },1000)
                 e.preventDefault()
             //    clearInterval(idTime)
             })

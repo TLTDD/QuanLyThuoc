@@ -25,8 +25,8 @@ class PayController
         $ThoiGian =  date('Y-m-d H:i:s');
 
         $count = 0;
-        if (isset($_SESSION['product'])) {
-            foreach ($_SESSION['product'] as $value) {
+        if (isset($_SESSION['productMe'])) {
+            foreach ($_SESSION['productMe'] as $value) {
                 $count += $value['ThanhTien'];
             }
         }
@@ -40,6 +40,7 @@ class PayController
             // print_r($city[0]['name']);
             $diachi = $city[0]['name'] .' - '. $district[0]['name'] .' - '. $wards[0]['name'] .' - '. $village[0]['name'];
             $_SESSION['login2']['DiaChi'] = $diachi;
+            $ghiChu = $_POST['ghichu'];
         }
         $data = array(
             'MaND' => $_SESSION['login2']['MaND'],
@@ -47,7 +48,8 @@ class PayController
             'NguoiNhan' => $_SESSION['login2']['Ho'].' '. $_SESSION['login2']['Ten'],
             'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
-            'TongTien' => $count,
+            'ghiChu' => $ghiChu,
+            'TongTien' => ($count + 40000),
             'TrangThai'  =>  '0',
         );
         $this->pay_model->save($data);
