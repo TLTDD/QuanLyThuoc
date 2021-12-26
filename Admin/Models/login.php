@@ -9,9 +9,9 @@ class login
         $this->conn = $conn_obj->conn;
     }
     function tk_sanpham($id){
-        $query = "SELECT count(MaSP) as Count FROM sanpham WHERE MaDM = $id";
-
-        return $this->conn->query($query)->fetch_assoc();
+        // $query = "SELECT count(MaSP) as Count FROM sanpham WHERE MaDM = $id";
+        
+        // return $this->conn->query($query)->fetch_assoc();
     }
     function tk_thongbao(){
         $query = "SELECT count(MaHD) as Count FROM HoaDon WHERE TrangThai = 0";

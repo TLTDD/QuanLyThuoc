@@ -152,6 +152,16 @@
                                   break;
                               }
                               break;
+                            case 'login':
+                              switch ($act) {
+                                case 'admin':
+                                  require_once('Views/login/admin.php');
+                                  break;
+                                default:
+                                  require_once('Views/login/admin.php');
+                                  break;
+                              }
+                              break;
                         }
    
               }
