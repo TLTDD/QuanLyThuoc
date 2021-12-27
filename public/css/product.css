@@ -524,7 +524,6 @@ h1#product-list__title__h1 {
 }
 .label_title{
     padding: 3px;
-<<<<<<< HEAD
 }
 .btn{
     width: 50px;
@@ -545,7 +544,4 @@ h1#product-list__title__h1 {
 }
 
 .col-product__item.product-item__sale-off--none:hover .button-add-product {
-    /* top: -2px; */
-=======
->>>>>>> 1cd98e6f4cb9611ba07159618894af566ed9d2d6
-}
+    /* top: -2px; */}
