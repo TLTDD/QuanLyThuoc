@@ -15,7 +15,7 @@
       <th scope="col">Loại khuyến mãi</th>
       <th scope="col">Giá trị khuyến mãi</th>
       <th scope="col">Ngày bắt đầu</th>
-      <th>#</th>
+      <th>Thao tác</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +28,7 @@
         <td><?= $row['NgayBD'] ?></td>
         <td>
           <a href="?mod=khuyenmai&act=detail&id=<?= $row['MaKM'] ?>" class="btn btn-success">Xem</a>
-          <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
+          <?php if (isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) { ?>
           <a href="?mod=khuyenmai&act=edit&id=<?= $row['MaKM'] ?>" class="btn btn-warning">Sửa</a>
           <a href="?mod=khuyenmai&act=delete&id=<?= $row['MaKM'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
           <?php }?>

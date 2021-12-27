@@ -229,3 +229,11 @@
     background-color: #2788f0 !important;
     border-color: #2788f0 !important;
 }
+
+.head_table_tk th {
+    color: #fff;
+}
+
+.head_table_tk_ct th {
+    color: rgb(152, 99, 0);
+}

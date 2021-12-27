@@ -9,11 +9,13 @@
 
         public function admin()
         {
-            $data_tksp1 = $this->login_model->tk_sanpham(1);
-            $data_tksp2 = $this->login_model->tk_sanpham(2);
-            $data_tksp3 = $this->login_model->tk_sanpham(3);
+            // $data_tksp1 = $this->login_model->tk_sanpham(1);
+            // $data_tksp2 = $this->login_model->tk_sanpham(2);
+            // $data_tksp3 = $this->login_model->tk_sanpham(3);
 
             $data_hd = $this->login_model->tk_thongbao();
+
+            $data_hd_cd = $this->login_model->tk_thongbao_dd();
 
             $m = date("m");
 
@@ -26,7 +28,7 @@
             $data_nguoidung = $this->login_model->tk_nguoidung(1);
 
             $data_nhanvien = $this->login_model->tk_nguoidung(3);
-            require_once("./Views/index.php");
+            require_once("./Views/indexAD.php");
         }
     }
 ?>

@@ -9,18 +9,25 @@ class login
         $this->conn = $conn_obj->conn;
     }
     function tk_sanpham($id){
-        $query = "SELECT count(MaSP) as Count FROM sanpham WHERE MaDM = $id";
-
-        return $this->conn->query($query)->fetch_assoc();
+        // $query = "SELECT count(MaSP) as Count FROM sanpham WHERE MaDM = $id";
+        
+        // return $this->conn->query($query)->fetch_assoc();
     }
     function tk_thongbao(){
         $query = "SELECT count(MaHD) as Count FROM HoaDon WHERE TrangThai = 0";
 
         return $this->conn->query($query)->fetch_assoc();
     }
+
+    function tk_thongbao_dd(){
+        $query = "SELECT count(MaHD) as Count FROM HoaDon WHERE TrangThai = 1";
+
+        return $this->conn->query($query)->fetch_assoc();
+    }
+
     function tk_dtthang($m){
         $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayLap) = $m And TrangThai = 1";
-
+        
         return $this->conn->query($query)->fetch_assoc();
     }
     function tk_dtnam($y){

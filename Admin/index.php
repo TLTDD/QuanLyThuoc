@@ -192,6 +192,18 @@ session_start();
                     break;
             }
             break; 
+        case 'login':
+            require_once('Controllers/LoginController.php');
+            $controller_obj = new LoginController();
+            switch ($act) {
+                case 'admin':
+                    $controller_obj->admin();
+                    break;
+                default:
+                    $controller_obj->admin();
+                    break;
+            }
+            break;
         default:
         header('location: ?mod=bill');
         }

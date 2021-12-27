@@ -15,7 +15,7 @@
       <th scope="col">Địa chỉ</th>
       <th scope="col">SĐT</th>
       <th scope="col">Trạng thái</th>
-      <th>#</th>
+      <th>Thao tác</th>
     </tr>
   </thead>
   <tbody>
