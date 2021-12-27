@@ -158,7 +158,8 @@
                                             ?>
                                                 <li class="group-login__list-item"><b>Chào <?=$_SESSION['login2']['Ten']?></b></li>
                                                 <li class="group-login__list-item"><a href="?act=taikhoan&xuli=account">Tài khoản</a></li>
-                                                <li class="group-login__list-item"><a href="?act=orderMy">Đơn hàng của tôi</a></li>
+                                                <li class="group-login__list-item"><a href="?act=orderMy">Đơn hàng của tôi</a></li>  
+                                                <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                                 <?php
                                                 if(isset($_SESSION['isLogin2_Admin']) || isset($_SESSION['isLogin2_Nhanvien']) || isset($_SESSION['isLogin2_GiaoHang'])){ ?>
                                                 <li class="group-login__list-item"><a href="admin/?mod=login">Trang quản lý</a></li>
@@ -168,7 +169,6 @@
                                                     <a href="?act=taikhoan&xuli=login">Đăng nhập</a>
                                                 </li>
                                                 <?php } ?>
-                                                <li class="group-login__list-item"><a href="?act=taikhoan&xuli=dangxuat">Đăng xuất</a></li>
                                                 
                                         </ul>
                                         </div>

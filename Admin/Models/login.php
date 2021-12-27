@@ -18,9 +18,16 @@ class login
 
         return $this->conn->query($query)->fetch_assoc();
     }
+
+    function tk_thongbao_dd(){
+        $query = "SELECT count(MaHD) as Count FROM HoaDon WHERE TrangThai = 1";
+
+        return $this->conn->query($query)->fetch_assoc();
+    }
+
     function tk_dtthang($m){
         $query = "SELECT SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayLap) = $m And TrangThai = 1";
-
+    
         return $this->conn->query($query)->fetch_assoc();
     }
     function tk_dtnam($y){
