@@ -8,7 +8,9 @@
 <hr>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
-    <tr>
+    <tr style="
+    background-color: #007bff;
+    color: white;">
       <th scope="col">Tên Khách Hàng</th>
       <th scope="col">Ngày đặt hàng</th>
       <th scope="col">Tổng tiền</th>
@@ -19,19 +21,17 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($data as $row) {
-         if($row['TrangThai']==1){
-      ?>
+  <?php foreach ($data as $row) { ?>
       <tr>
         <td><?= $row['NguoiNhan'] ?></td>
         <td><?= $row['NgayLap'] ?></td>
         <td><?= number_format($row['TongTien']) ?>VNĐ</td>
         <td><?= $row['DiaChi'] ?></td>
         <td><?= $row['SDT'] ?></td>
-        <td><?php if($row['TrangThaiDH']==0 ){
-            echo 'Chưa giao';
+        <td><?php if($row['TrangThaiDH']==1){
+          echo 'Đã giao';
         }else{
-            echo 'Đã giao';
+          echo 'Chưa giao';  
         }
         ?></td>
         <td>
@@ -39,7 +39,7 @@
           <a href="?mod=order&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
         </td>
       </tr>
-    <?php }} ?>
+    <?php } ?>
 </table>
 <script>
   $(document).ready(function() {

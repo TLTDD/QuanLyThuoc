@@ -16,6 +16,12 @@ class Model
         return $data;
    }
 
+   function trangThaiDonHang(){
+    $query = "select * from $this->table where TrangThai=1 ORDER BY $this->contens ASC";
+    require("result.php");
+    return $data;
+}
+
    function find($id)
     {
         $query = "select * from $this->table where $this->contens =$id";
