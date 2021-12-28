@@ -9,10 +9,12 @@
 <hr>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
-    <tr>
+    <tr  style="
+    background-color: #007bff;
+    color: white;">
       <th scope="col">Mã danh mục</th>
       <th scope="col">Tên danh mục</th>
-      <th scope="col">#</th>
+      <th scope="col">Thao tác</th>
     </tr>
   </thead>
   <tbody>
@@ -22,7 +24,7 @@
         <td><?= $row['TenDM'] ?></td>
         <td>
           <a href="?mod=category&act=detail&id=<?= $row['MaDM'] ?>" class="btn btn-success">Xem</a>
-          <?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
+          <?php if (isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) { ?>
           <a href="?mod=category&act=edit&id=<?= $row['MaDM'] ?>" class="btn btn-warning">Sửa</a>
           <a href="?mod=category&act=delete&id=<?= $row['MaDM'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
           <?php }?>

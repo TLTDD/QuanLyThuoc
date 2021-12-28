@@ -9,7 +9,9 @@
 <hr>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
-    <tr>
+    <tr  style="
+    background-color: #007bff;
+    color: white;">
       <th scope="col">Mã khuyến mãi</th>
       <th scope="col">Tên khuyến mãi</th>
       <th scope="col">Loại khuyến mãi</th>

@@ -26,6 +26,7 @@ class HoaDonController
         $data = array(
             'MaHD' => $_GET['id'],
             'TrangThai' => 1,
+            'TrangThaiDH' => 0,
         );
         $this->hoadon_model->update($data);
     }

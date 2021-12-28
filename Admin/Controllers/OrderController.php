@@ -7,6 +7,7 @@ class OrderController
     {
         $this->order_model = new Order();
     }
+
     function list()
     {
         $data = array();
@@ -17,7 +18,7 @@ class OrderController
             }
             $data = $this->order_model->trangthaiDH($id);
         } else {
-            $data = $this->order_model->All();
+            $data = $this->order_model->trangThaiDonHang();
         }
         require_once("./Views/indexAD.php");
     }
@@ -25,7 +26,6 @@ class OrderController
     {
         $data = array(
             'MaHD' => $_GET['id'],
-            'TrangThai' => 1,
             'TrangThaiDH' => 1,
         );
         $this->order_model->update($data);

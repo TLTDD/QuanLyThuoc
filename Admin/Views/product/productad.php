@@ -7,7 +7,9 @@
     <?php } ?>
     <hr>
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-        <thead>
+        <thead  style="
+    background-color: #007bff;
+    color: white;">
             <th  scope="col">Mã sản phẩm</th>
             <th  scope="col">Tên sản phẩm</th>
             <th  scope="col">Giá thành</th>
