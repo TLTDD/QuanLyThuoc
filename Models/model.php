@@ -27,7 +27,7 @@
         }
         function danhmuc()
         {
-            $query =  "SELECT * from DanhMuc";
+            $query = "SELECT * from DanhMuc";
     
             require("result.php");
             

@@ -197,7 +197,7 @@
                     <div class="product-list col-lg-9" >
                         <div class="container">
                             <div class="product-list__title row">
-                                <h1 id="product-list__title__h1"><?= $data_danhmuc[$cate -1]['TenDM'] ?></h1>
+                                <h1 id="product-list__title__h1"><?= $data_danhmuc[$cate -1]['TenDM'];?></h1>
                             </div>
                         
                         <?php 

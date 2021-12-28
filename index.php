@@ -79,8 +79,8 @@ switch ($mod) {
         }
         break;
     case "detail":
-        require_once('./Controllers/ProductController.php');
-        $objCate = new ProductController();
+        require_once('./Controllers/DetailController.php');
+        $objCate = new DetailController();
         $objCate->list();
         break;
     case 'orderMy': 

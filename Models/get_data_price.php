@@ -7,6 +7,7 @@
         if(count($listValue) > 0){
             foreach ($listValue as $item){
                 $query = "SELECT * FROM danhmuc, loaisanpham, sanpham, hinhanh WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and danhmuc.TenDM = '{$danhmuc}' and sanpham.DonGia between {$item} GROUP by sanpham.MaSP";
+                // echo $query;
                 $result = $mysqli->query($query);
                 $row =  $result -> fetch_array(MYSQLI_ASSOC);
                 if($row){

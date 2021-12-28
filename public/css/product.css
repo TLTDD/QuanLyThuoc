@@ -81,14 +81,8 @@
     padding: 0px 6px;
     position: relative;
     overflow: hidden;
-    /*   width: 100%;
-    height: 100%;
-<<<<<<< HEAD
-    max-height: 290px;
-=======
-    /* max-height: 290px; */
-    max-height: 355px;
-    height: 355px;
+    max-height: 400px;
+    height: 400px;
 }
 .col-product__item.sale-home {
     width: 212px;
@@ -96,7 +90,7 @@
 .product-img{
     position: relative;
     width: 100%;
-    border: 6px solid #ff8720;
+    border: 1px solid #ff8720;
     text-align: center;
     overflow: hidden;
 }
@@ -526,8 +520,8 @@ h1#product-list__title__h1 {
     padding: 3px;
 }
 .btn{
-    width: 50px;
-    margin: 20px;
+    /* width: 50px; */
+    /* margin: 20px; */
 }
 
 

@@ -313,7 +313,7 @@ li.group-login__list-item > b {
     background-color: rgb(15, 143, 228);
 }
 .cart-content-inner__btn.btn-show:hover {
-    background-color: #70ec0b;
+    background-color: var(--cl-red);
 }
 a.cart-content-inner__btn{
     padding: 8px 0;
@@ -332,7 +332,7 @@ a.cart-content-inner__btn{
     margin-bottom: 12px;
 }
 .cart-content-inner__btn.btn-show {
-    background-color: var(--cl-blue);
+    background-color: var(--cl-red);
 }
 
 /* END CART */
@@ -1108,12 +1108,12 @@ p.product-detail-main__desc-text {
      color: var(--cl-blue);
  }
 .buy-now{
-    background-color: var(--cl-blue);
+    background-color: var(--cl-red);
     border: 1px solid var(--cl-blue);
 }
 .buy-now:hover {
-    background-color: #fff;
-    color: var(--cl-red);
+    background-color: #ee0f47;
+    /* color: var(--cl-red); */
 }
 .icon-heart{ 
     margin-top: 20px;
@@ -1587,6 +1587,30 @@ span.pay-order__item-price {
     padding-top: 24px;
     display: flex;
     justify-content: space-between;
+}
+
+.form-group.address-wrapper {
+    display: flex;
+    align-items: center;
+}
+.address-default {
+    padding-left: 20px;
+}
+.btn-address {
+    color: #000;
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #c1c1c1;
+}
+
+span.address-default-span {
+    padding-bottom: 10px;
+    display: block;
+}
+
+.btn-address-active {
+    background-color: var(--cl-orange);
+    color: #fff;
 }
 
 button.pay-order__button-check {

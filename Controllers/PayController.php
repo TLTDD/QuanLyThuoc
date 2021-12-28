@@ -13,6 +13,7 @@ class PayController
     function list_cart()
     {
         $data_danhmuc = $this->pay_model->danhmuc();
+        $data_address = $this->pay_model->getAddressDefault($_SESSION['login2']['MaND']);
         $data = $this->pay_model->getProvince();
         require_once('Views/indexview.php');
     }
@@ -32,15 +33,19 @@ class PayController
         }
         if(isset($_POST['submit'])) {
             // $diachi =  $_POST['diachi'];
-            $city = $this->pay_model->getCity($_POST['city'], 'province');
-            $district = $this->pay_model->getCity($_POST['district'],'district');
-            $wards = $this->pay_model->getCity($_POST['wards'], 'ward');
-            $village = $this->pay_model->getCity($_POST['village'], 'village');
-
-            // print_r($city[0]['name']);
-            $diachi = $city[0]['name'] .' - '. $district[0]['name'] .' - '. $wards[0]['name'] .' - '. $village[0]['name'];
-            $_SESSION['login2']['DiaChi'] = $diachi;
-            $ghiChu = $_POST['ghichu'];
+            if(isset($_POST['city']) && $_POST['district'] && $_POST['wards'] && $_POST['village']) {
+                $city = $this->pay_model->getCity($_POST['city'], 'province');
+                $district = $this->pay_model->getCity($_POST['district'],'district');
+                $wards = $this->pay_model->getCity($_POST['wards'], 'ward');
+                $village = $this->pay_model->getCity($_POST['village'], 'village');
+                // print_r($city[0]['name']);
+                $diachi = $city[0]['name'] .' - '. $district[0]['name'] .' - '. $wards[0]['name'] .' - '. $village[0]['name'];
+                $_SESSION['login']['DiaChi'] = $diachi;
+            }else {
+                $diachi = $_POST['address-default'];
+                $_SESSION['login2']['DiaChi'] = $diachi;
+            }
+            $ghichu = $_POST['ghichu'];
         }
         $data = array(
             'MaND' => $_SESSION['login2']['MaND'],
@@ -48,7 +53,7 @@ class PayController
             'NguoiNhan' => $_SESSION['login2']['Ho'].' '. $_SESSION['login2']['Ten'],
             'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
-            'ghiChu' => $ghiChu,
+            'ghiChu' => $ghichu,
             'TongTien' => ($count + 40000),
             'TrangThai'  =>  '0',
         );

@@ -21,6 +21,12 @@ class PayModel extends Model
         return $data;
     }
 
+    function getAddressDefault($MaND) {
+        $query = "SELECT DiaChi FROM nguoidung where MaND = '$MaND'";
+        require("result.php");
+        return $data;
+    }
+
     function save($data){
         print_r($data);
         $f = "";

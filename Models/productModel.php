@@ -13,6 +13,7 @@
                     GROUP by sanpham.MaSP
          		    ORDER BY ThoiGian DESC limit $a,$b";
             require("result.php");
+            // echo $query;
             return $data;  
         }
         function sanpham_khuyenmai() {
@@ -24,7 +25,8 @@
         }
         public function sanpham($masp)
         {
-            $query ="SELECT * from sanpham,hinhanh where sanpham.MaSP = hinhanh.masp and sanpham.MaSP = '$masp'";
+            $query ="SELECT * from sanpham,hinhanh,danhmuc,loaisanpham
+            where sanpham.MaSP = hinhanh.masp and sanpham.MaLSP = loaisanpham.MaLSP and loaisanpham.MaDM = danhmuc.MaDM and sanpham.MaSP = '$masp'";
             require("result.php");
             return $data;
         }

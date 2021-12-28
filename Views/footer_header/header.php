@@ -123,7 +123,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="cart-content-inner__checkout">
-                                                    <a href="?act=pay" class="cart-content-inner__btn btn-checkout">Thanh toán</a >
+                                                    <a href="<?php 
+                                                            if(isset($_SESSION['login2'])) {
+                                                                echo '?act=pay';
+                                                            } else {
+                                                                echo '?act=taikhoan';}?>" 
+                                                    class="cart-content-inner__btn btn-checkout">Thanh toán</a >
                                                 </div>
                                                 <!-- <?php 
                                                         if(isset($_COOKIE['msg2'])) {

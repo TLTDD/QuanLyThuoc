@@ -116,108 +116,50 @@
                     </h2>
                 </div>
             </div>
-            <div class="owl-carousel owl-theme" id="owl-slider-dry">
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/images-dry/sp26.jpg" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
+            <div class="owl-carousel owl-theme" id="owl-slider-concerning">
+                <div class="row">
+                    <?php foreach ($data_lq as $row) { 
+                        if ($row['GiaTriKM'] == 0) {
+                            $status = "product-item__sale-off--none";
+                            $km = "no";
+                            $makm = "";
+                        }
+                        else {
+                            $status = "";
+                            $makm = "&km=" .$row['GiaTriKM'];
+                        }
+                        ?>
+                        <div class="col col-lg-3 col-md-3">
+                            <div class="col-product__item sale-home <?= $status?>">
+                                <form action="" >
+                                    <div>
+                                    <div class="product-item__sale-off <?= $status?>">
+                                        <span class="home-product-item__percent"><?php echo $row['GiaTriKM'] ?>%</span>
+                                        <label class ="home-product-item__label" for="">Giảm</label>
+                                    </div>
+                                    <a href="">
+                                        <i data-heart="<?php echo $row['MaSP'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                                    </a>
+                                    </div>
+                                    <div class="product-img">
+                                        <a href="?act=detail&sp=<?=$row['MaSP']?><?= $makm ?>" style="display: block;">
+                                            <span class ="img--hover"></span> 
+                                            <img src="./public/images/<?php echo $row['hinhanh'] ?>" alt="">
+                                        </a>
+                                        <p class="text-sale">Sale</p>
+                                    </div>
+                                    <div class="product-fruits__infos">
+                                        <h2 class="tilte-name-product"><?= $row['TenSP']?></h2>
+                                        <div>
+                                        <span class="price-new"><?= number_format( $row['DonGia']) ?>đ</span>
+                                        <a href="?act=cart&xuli=add&id=<?=$row['MaSP']?>" class="button-add-product button-add-product btn-add-cart button-add-product--view">Cho vào giỏ</a>
+                                        <span class="price-old"><?php echo number_format($row['giaCu']) ?>đ</span>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">Kỷ tử khô đỏ - loại đẹp 100g</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/images-dry/sp27.jpg" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">Bò khô que hộp 250g</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/images-dry/sp28.jpg" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">500g cá khô sạch con to</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/images-dry/sp29.webp" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">Trứng gà</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/pro20-grande.webp" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">Chuối Tiêu Quê Loại To</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="product-main">
-                    <form action="">
-                        <div class="product-fruits__thumb">
-                            <a href="">
-                                <img src="./public/images/pro20-grande.webp" alt="">
-                            </a>
-                            <div class="icon-heart-product">
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>
-                        <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product">Chuối Tiêu Quê Loại To</h2>
-                            <span class="price-text">60.000đ</span>
-                            <button class="button-add-product">Cho vào giỏ</button>
-                        </div>
-                    </form>
+                    <?php } ?>
                 </div>
             </div>
         </div>
