@@ -132,7 +132,7 @@ p.text-sale {
 .col-product__item:hover .button-add-product {
         visibility: visible;
         right: -10px;
-        top: -3px;
+        top: 4px;
     } 
 
 .img--hover{
@@ -519,13 +519,10 @@ h1#product-list__title__h1 {
 .label_title{
     padding: 3px;
 }
-<<<<<<< HEAD
 .btn{
     /* width: 50px; */
     /* margin: 20px; */
 }
-=======
->>>>>>> 69683fb000e99ee28cee6d10a82e861c1370d97d
 
 
 .col-product__item.product-item__sale-off--none .product-item__sale-off,

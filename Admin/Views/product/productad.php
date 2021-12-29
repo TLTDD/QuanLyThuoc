@@ -11,7 +11,7 @@
     background-color: #007bff;
     color: white;">
             <th  scope="col">Mã sản phẩm</th>
-            <th  scope="col">Tên sản phẩm</th>
+            <th  scope="col" style="width: 205.922px;">Tên sản phẩm</th>
             <th  scope="col">Giá thành</th>
             <th  scope="col">Số lượng</th>
             <th  scope="col">Trạng thái</th>

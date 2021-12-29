@@ -10,6 +10,7 @@ require_once("./Models/productModel.php");
         }
         function list()
         {   
+            $data_danhmuc = $this->product_model->danhmuc();
             if(isset($_GET['sp']))
             {
                 $data_sanpham  = $this->product_model->sanpham($_GET['sp']);

@@ -20,12 +20,14 @@ $(document).ready(function(){
 
     $(".city").change(function() {
         var id = $(".city").val();
+        // alert(id);
         $.post("Models/choose_city/data.php", {id: id}, function(data) {
             $(".huyen").html(data);
         })
     })
     $(".huyen").change(function() {
         var idHuyen = $(".huyen").val();
+        // alert(idHuyen);
         $.post("Models/choose_city/ward.php",{idHuyen: idHuyen},function(data) {
             $(".xa").html(data);
         })
@@ -63,7 +65,8 @@ $(document).ready(function(){
     });
     function ajaxFilter() {
         var listValue = JSON.parse(localStorage.getItem("listValuePrice"))
-        var danhmuc = $("#danhmuc").text();
+        var danhmuc = $("#product-list__title__h1").attr("data-danhmuc");
+        console.log(danhmuc);
         $.ajax({
             url: "Models/get_data_price.php",
             method: "POST",

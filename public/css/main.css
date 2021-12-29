@@ -740,10 +740,10 @@ h2.tilte-name-product {
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -263px;
+    top: -280px;
 }
 #product-sale-slider .owl-nav {
-    top: -210px;
+    top: -285px;
 }
 
 
@@ -1727,7 +1727,7 @@ a.btn-back-home {
 }
 
 span.pad-order__item-name {
-    width: 250px;
+    max-width: 192px;
 }
 
 /* ORDER_MY */

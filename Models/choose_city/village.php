@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli("localhost","root","","webfood");
+    $mysqli = new mysqli("localhost","root","","data_medicine");
     $key = $_POST['idXa'];
     $query = "SELECT *from village where wardid = '$key'";
     $result = $mysqli->query($query);

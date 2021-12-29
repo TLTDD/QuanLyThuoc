@@ -1,5 +1,5 @@
 <?php
-    $mysqli = new mysqli("localhost","root","","webfood");
+    $mysqli = new mysqli("localhost","root","","data_medicine");
     $key = $_POST['id'];
     $query = "SELECT *from district where provinceid = '$key'";
     $result = $mysqli->query($query);

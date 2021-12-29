@@ -69,8 +69,8 @@ class PayController
             $data_chitietDM[$i] = $this->pay_model->chitietdanhmuc($i);
         }
         $count = 0;
-        if (isset($_SESSION['product'])) {
-            foreach ($_SESSION['product'] as $value) {
+        if (isset($_SESSION['productMe'])) {
+            foreach ($_SESSION['productMe'] as $value) {
                 $count += $value['ThanhTien'];
             }
         }

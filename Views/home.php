@@ -160,8 +160,9 @@
                                 <h2 class="tilte-name-product"><?= $data_khuyenmai[$i]['TenSP']?></h2>
                                 <div>
                                 <span class="price-new"><?= number_format( $data_khuyenmai[$i]['DonGia']) ?>đ</span>
-                                <button class="button-add-product button-add-product--view">Cho vào giỏ</button>
-                                <span class="price-old"><?php echo number_format($data_khuyenmai[$i]['DonGia']+ 20000) ?>đ</span>
+                                <a href="?act=cart&xuli=add&id=<?=$data_khuyenmai[$i]['MaSP']?>&km=<?php echo $data_khuyenmai[$i]['GiaTriKM']; ?>" 
+                                class="button-add-product button-add-product btn-add-cart button-add-product--view">Cho vào giỏ</a>
+                                <span class="price-old"><?php echo number_format($data_khuyenmai[$i]['giaCu']) ?>đ</span>
                                 </div>
                             </div>
                         </form>
@@ -193,7 +194,7 @@
                     }
                     else {
                         $status = "";
-                        $makm = "&km=" .$data_sanpham1[$i]['MaSP'];
+                        $makm = "&km=" .$data_sanpham1[$i]['GiaTriKM'];
                     }
                     ?>
                      <div class="col-product__item sale-home <?= $status?>">
@@ -219,7 +220,7 @@
                                 <div>
                                 <span class="price-new"><?= number_format( $data_sanpham1[$i]['DonGia']) ?>đ</span>
                                 <a href="?act=cart&xuli=add&id=<?=$data_sanpham1[$i]['MaSP']?>" class="button-add-product button-add-product btn-add-cart button-add-product--view">Cho vào giỏ</a>
-                                <span class="price-old"><?php echo number_format($data_sanpham1[$i]['DonGia']+ 20000) ?>đ</span>
+                                <span class="price-old"><?php echo number_format($data_sanpham1[$i]['giaCu']) ?>đ</span>
 
                                 </div>
                             </div>
@@ -252,7 +253,7 @@
                     }
                     else {
                         $status = "";
-                        $makm = "&km=" .$data_sanpham2[$i]['MaSP'];
+                        $makm = "&km=" .$data_sanpham2[$i]['GiaTriKM'];
                     }
                     ?>
                      <div class="col-product__item sale-home <?= $status?>">

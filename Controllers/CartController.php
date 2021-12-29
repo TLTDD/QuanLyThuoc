@@ -31,6 +31,7 @@ class CartController
     function add_cart($sl)
     {
         $id = $_GET['id'];
+        echo $id;
         $data = $this->cart_model->detail_sp($id);
         print_r($data);
         $count = 0;
@@ -54,7 +55,14 @@ class CartController
         foreach ($_SESSION['productMe'] as $value) {
             $count += $value['ThanhTien'];
         }
+        // if(isset($_POST['km'])) {
+        //     $km = '&km=' .$_POST['km'];
+        // }else {
+        //     $km = '';
+        // }
+        // echo $_POST['km']
         $path = 'Location:?act=detail&sp=' .$id;
+        echo $path;
         header($path);
     }
     function update_cart()

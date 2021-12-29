@@ -95,8 +95,8 @@
                 $soluong = 0;
                 $thanhtien = 0;
                 $countProduct = 0;
-                if(isset($_SESSION['product'])){
-                foreach ($_SESSION['product'] as $value) {
+                if(isset($_SESSION['productMe'])){
+                foreach ($_SESSION['productMe'] as $value) {
                     $countProduct++;
                     $soluong +=1;
                     $thanhtien +=$value['ThanhTien'];
@@ -131,7 +131,7 @@
                     </div>
                     <div class="pay-order-list">
                         <ul>
-                            <?php foreach ($_SESSION['product'] as $value) {?>
+                            <?php foreach ($_SESSION['productMe'] as $value) {?>
                             <li class="pad-order__item">
                                 <div class="pad-order__item-img">
                                     <img src="./public/images/<?php echo $value['hinhanh']?>" alt="">
@@ -183,7 +183,6 @@
     </form>
     </div>
 </main>
-
 <script>
     (function(){
         var htmls = `

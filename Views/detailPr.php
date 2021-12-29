@@ -22,9 +22,10 @@
     </div>
 <?php  
     if(isset($_GET['km'])){
-        $km = $_GET['km'];
+        $km = '&km=' .$_GET['km'];
         $status = true;
     }else{
+        $km = '';
         $status = false;
     }
 ?>
@@ -60,7 +61,7 @@
                     <span class="product-detail-main__price-new"><?php echo number_format($data_sanpham[0]['DonGia']); ?> đ</span>
                     <?php if($status == true) { ?>
                     <span class="product-detail-price__old"><?php echo number_format($data_sanpham[0]['giaCu']); ?> đ</span>
-                    <span class="product-detail-price__sale"><?= $km ?>%</span>
+                    <span class="product-detail-price__sale"><?= $_GET['km'] ?>%</span>
                     <?php } ?>
                 </div>
                 <div class="product-detail-main__desc">
@@ -80,6 +81,7 @@
                     </a>
                 </div>
                 <div class="group-button-add">
+                    <input type="text" hidden name="km" value="<?= $_GET['km'] ?>">
                     <a href="?act=cart&xuli=add&id=<?php echo $data_sanpham[0]['MaSP']; ?>&sl=1" class="add-cart btn-add-cart" data-id="<?php echo $data_sanpham[0]['MaSP']; ?>">Cho vào giỏ hàng</a>
                     <a href="" class="buy-now">Mua ngay</a>
                 </div>

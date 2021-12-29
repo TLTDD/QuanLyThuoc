@@ -83,31 +83,24 @@
             <?php }?>
 		</div>
     </div>
-
-    <div class="cart-page-footer">
-        <div class="cart-page-footer-total">
-            <p>Tổng tiền</p>
-            <span>
-                <?php echo number_format($thanhtien) ?>
-                đ
-            </span>
+    <?php if(!isset($_SESSION['productMe']) || count($_SESSION['productMe']) == 0) { ?>
+        <div class="cart-page-footer">
+            <div class="cart-page-footer-button">
+                <a href="?act=home">Tiếp tục mua hàng</a>
+            </div>
         </div>
-        <div class="cart-page-footer-button">
-            <a href="
-            <?php 
-                if(isset($_SESSION['login2'])) {
-                    echo '?act=pay';
-                } else {
-                    echo '?act=taikhoan';
-                }?>
-            ">Thanh toán</a>
-            <!-- <?php 
-                if(isset($_COOKIE['msg2'])) {
-                    echo '?act=pay';
-                } else {
-                    echo '?act=taikhoan';
-                }
-            ?> -->
+        <?php } else { ?>
+            <div class="cart-page-footer">
+            <div class="cart-page-footer-total">
+                <p>Tổng tiền</p>
+                <span>
+                    <?php echo number_format($thanhtien) ?>
+                    đ
+                </span>
+            </div>
+            <div class="cart-page-footer-button">
+                <a href="?act=pay">Thanh toán</a>
+            </div>
         </div>
-    </div>
+    <?php }?>
 </main>

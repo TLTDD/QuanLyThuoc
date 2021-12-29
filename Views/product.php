@@ -44,26 +44,26 @@
                                 <h1>Sắp xếp</h1>
                                 <ul class="filter-product__collocation">
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" class="input-filter__radio" value="asc" id="asc" onclick="filterProduct('asc','TenSP', '<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" class="input-filter__radio" value="asc" id="asc" onclick="filterProduct('asc','TenSP', '<?php echo $cate?>')">
                                         <label for="asc">Tên A - Z</label><br></li>
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" class="input-filter__radio" value="desc" id="desc" onclick="filterProduct('desc','TenSP','<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" class="input-filter__radio" value="desc" id="desc" onclick="filterProduct('desc','TenSP','<?php echo $cate?>')">
                                         <label for="desc">Tên Z - A</label><br></li>
                                     </li>
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" class="input-filter__radio" value="price-asc" id="price_asc" onclick="filterProduct('asc','DonGia','<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" class="input-filter__radio" value="price-asc" id="price_asc" onclick="filterProduct('asc','DonGia','<?php echo $cate?>')">
                                         <label for="price_asc">Giá thấp đến cao</label><br></li>
                                     </li>
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" class="input-filter__radio" value="price-desc" id="price_desc" onclick="filterProduct('desc','DonGia','<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" class="input-filter__radio" value="price-desc" id="price_desc" onclick="filterProduct('desc','DonGia','<?php echo $cate?>')">
                                         <label for="price_desc">Giá cao đến thấp</label><br></li>
                                     </li>
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" class="input-filter__radio" value="news" id="news" onclick="filterProduct('desc','ThoiGian','<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" class="input-filter__radio" value="news" id="news" onclick="filterProduct('desc','ThoiGian','<?php echo $cate?>')">
                                         <label for="news">Mới nhất</label><br></li>
                                     </li>
                                     <li class="filter-collocation__item">
-                                        <input type ="radio" name ="radio" id="old" class="input-filter__radio" value="old" onclick="filterProduct('Asc','ThoiGian','<?php echo $data_danhmuc[$cate- 1]['TenDM'];?>')">
+                                        <input type ="radio" name ="radio" id="old" class="input-filter__radio" value="old" onclick="filterProduct('Asc','ThoiGian','<?php echo $cate?>')">
                                         <label for="old">Cũ nhất</label><br></li>
                                     </li>
                                 </ul>
@@ -197,7 +197,7 @@
                     <div class="product-list col-lg-9" >
                         <div class="container">
                             <div class="product-list__title row">
-                                <h1 id="product-list__title__h1"><?= $data_danhmuc[$cate -1]['TenDM'];?></h1>
+                                <h1 id="product-list__title__h1" data-danhmuc="<?= $cate ?>"><?= $data_danhmuc[$cate -1]['TenDM'];?></h1>
                             </div>
                         
                         <?php 
@@ -215,7 +215,7 @@
                                         }
                                         else {
                                             $status = "";
-                                            $makm = "&km=" .$data_sanpham[$i]['MaSP'];
+                                            $makm = "&km=" .$data_sanpham[$i]['GiaTriKM'];
                                         }
                                         ?>
                                     
@@ -236,10 +236,10 @@
                                                 <p class="text-sale <?= $status ?>">Sale</p>
                                             </div>
                                             <div class="product-fruits__infos">
-                                                <h2 class="tilte-name-product-t"><?= $data_sanpham[$i]['TenSP']?></h2>
+                                                <h2 class="tilte-name-product"><?= $data_sanpham[$i]['TenSP']?></h2>
                                                 <div>
                                                 <span class="price-new"><?= number_format( $data_sanpham[$i]['DonGia']) ?>đ</span>
-                                                <a href="?act=cart&xuli=add&id=<?=$data_sanpham[$i]['MaSP']?>" 
+                                                <a href="?act=cart&xuli=add&id=<?=$data_sanpham[$i]['MaSP']?><?= $makm ?>" 
                                                 class="button-add-product button-add-product--view btn-add-cart">Cho vào giỏ</a>
                                                 <span class="price-old <?= $status ?>"><?php echo number_format($data_sanpham[$i]['giaCu']) ?>đ</span>
                                                 </div>
