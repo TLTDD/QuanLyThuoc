@@ -938,7 +938,7 @@ input.seed-mail::placeholder {
     display: flex;
 }
 
-.footer-nav ul li {margin-right: 14px;}
+.footer-nav ul li {margin-right: 7px;}
 
 .footer-nav ul li a:hover {color: var(--cl-orange);}
 
@@ -1143,7 +1143,7 @@ i.far.fa-heart.icon-heart-i {
     padding-bottom: 20px;
  }
  .product-tab-desc__element p {
-    line-height: 22px;
+    line-height: 38px;
 }
 
 .product-tab-desc {

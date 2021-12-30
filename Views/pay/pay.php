@@ -2,8 +2,8 @@
     <div class="container">
     <div class="pay-head">
         <h2>
-            <a href="">
-            Fruity Fresh
+            <a href="?act=home">
+                Pharmacity
             </a>
         </h2>
         <div class="pay-head-bottom">
@@ -183,6 +183,7 @@
     </form>
     </div>
 </main>
+
 <script>
     (function(){
         var htmls = `

@@ -59,7 +59,7 @@
 							<div class="address box-des">
 								<p> 
                                     <strong>
-                                    <?=$_SESSION['login']['Ten'] ?>  <?=$_SESSION['login']['Ho']?>
+                                    <?=$_SESSION['login2']['Ten'] ?>  <?=$_SESSION['login2']['Ho']?>
                                     </strong>
                                 </p>
 								<p>Địa chỉ: <?php echo $data_detail_order[0]['DiaChi'] ?></p>	

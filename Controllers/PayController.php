@@ -40,7 +40,7 @@ class PayController
                 $village = $this->pay_model->getCity($_POST['village'], 'village');
                 // print_r($city[0]['name']);
                 $diachi = $city[0]['name'] .' - '. $district[0]['name'] .' - '. $wards[0]['name'] .' - '. $village[0]['name'];
-                $_SESSION['login']['DiaChi'] = $diachi;
+                $_SESSION['login2']['DiaChi'] = $diachi;
             }else {
                 $diachi = $_POST['address-default'];
                 $_SESSION['login2']['DiaChi'] = $diachi;

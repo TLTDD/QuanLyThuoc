@@ -99,7 +99,11 @@
                 </span>
             </div>
             <div class="cart-page-footer-button">
-                <a href="?act=pay">Thanh toán</a>
+                <a href="<?php 
+                    if(isset($_SESSION['login2'])) {
+                        echo '?act=pay';
+                    } else {
+                        echo '?act=taikhoan';}?>">Thanh toán</a>
             </div>
         </div>
     <?php }?>

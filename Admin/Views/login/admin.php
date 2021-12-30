@@ -14,13 +14,13 @@
     <tr class="head_table_tk_ct">
       <th><?= $data_nguoidung['Count'] ?> người</th>
       <th><?= number_format($data_countM['Count']) ?> VNĐ</th>
-      <th><?= number_format($data_countM['Count']) ?> VNĐ</th>
+      <th><?= number_format($data_countY['Count']) ?> VNĐ</th>
     </tr>
   </table>
   <div class="chart-box">
     <div class="container">
       <div class="row">
-        <div class="card mt-4 mb-4 col col-md-6">
+        <div class="card mt-4 mb-4 col col-md-12">
           <div class="card-header">Đơn hàng</div>
           <div class="card-body">
             <div class="chart-container pie-chart">
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <div class="card mt-4 mb-4 col col-md-6">
+        <div class="card mt-4 mb-4 col col-md-12">
           <div class="card-header">Doanh thu của năm</div>
           <div class="card-body">
             <div class="chart-container pie-chart">
@@ -109,6 +109,9 @@
     })
   }
 
+  function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  } 
   function lineChart() {
     $.ajax({
       url:"Views/login/doanhthu.php",
@@ -126,7 +129,10 @@
           if(data[count][0].total === null) {
             data[count][0].total = 0
           }
-          console.log(data[count][0]);
+          // else {
+          //   data[count][0].total = data[count][0].total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+          //   console.log(data[count][0].total.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.'));
+          // }
           Thang.push(data[count][0].month);
           total.push(data[count][0].total);
         }

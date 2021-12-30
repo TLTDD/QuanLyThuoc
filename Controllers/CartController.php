@@ -33,7 +33,7 @@ class CartController
         $id = $_GET['id'];
         echo $id;
         $data = $this->cart_model->detail_sp($id);
-        print_r($data);
+        // print_r($data);
         $count = 0;
         if (isset($_SESSION['productMe'][$id])) {
             $arr = $_SESSION['productMe'][$id];
@@ -61,8 +61,10 @@ class CartController
         //     $km = '';
         // }
         // echo $_POST['km']
-        $path = 'Location:?act=detail&sp=' .$id;
-        echo $path;
+        // $path = 'Location:?act=detail&sp=' .$id;
+        // echo $path;
+        // header($path);
+        $path = 'Location:?act=cart';
         header($path);
     }
     function update_cart()

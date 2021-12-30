@@ -4,12 +4,8 @@
     <div class="break-crumb">
         <div class="break-crumb__head">
             <div class="home">
-                <a href="#">
+                <a href="?act=home">
                     <span>Trang chủ</span>
-                </a>
-                <span class="mr_lr">&nbsp;/ &nbsp;</span>
-                <a href="#">
-                    <span>Sản phẩm nổi bật</span>
                 </a>
                 <span class="mr_lr">&nbsp;/ &nbsp;</span>
             </div>
@@ -81,7 +77,6 @@
                     </a>
                 </div>
                 <div class="group-button-add">
-                    <input type="text" hidden name="km" value="<?= $_GET['km'] ?>">
                     <a href="?act=cart&xuli=add&id=<?php echo $data_sanpham[0]['MaSP']; ?>&sl=1" class="add-cart btn-add-cart" data-id="<?php echo $data_sanpham[0]['MaSP']; ?>">Cho vào giỏ hàng</a>
                     <a href="" class="buy-now">Mua ngay</a>
                 </div>
