@@ -21,7 +21,7 @@
                             }
                             else {
                                 $status = "";
-                                $makm = "&km=" .$value['MaSP'];
+                                $makm = "&km=" .$value['GiaTriKM'];
                             }
                             $output .= '<div class="col-product__item col col-md-4 col-lg-4 '.$status.'">
                             <form action="" >
@@ -40,7 +40,7 @@
                                     <p class="text-sale '.$status.' ">Sale</p>
                                 </div>
                                 <div class="product-fruits__infos">
-                                    <h2 class="tilte-name-product-t"> '.$value['TenSP'].'</h2>
+                                    <h2 class="tilte-name-product"> '.$value['TenSP'].'</h2>
                                     <div>
                                     <span class="price-new">'.number_format($value['DonGia']).'đ</span>
                                     <button class="button-add-product button-add-product--view">Cho vào giỏ</button>
@@ -91,7 +91,7 @@
                             <p class="text-sale '.$status.' ">Sale</p>
                         </div>
                         <div class="product-fruits__infos">
-                            <h2 class="tilte-name-product-t"> '.$value['TenSP'].'</h2>
+                            <h2 class="tilte-name-product"> '.$value['TenSP'].'</h2>
                             <div>
                             <span class="price-new">'.number_format($value['DonGia']).'đ</span>
                             <button class="button-add-product button-add-product--view">Cho vào giỏ</button>

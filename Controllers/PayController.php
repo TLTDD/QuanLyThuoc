@@ -74,6 +74,7 @@ class PayController
                 $count += $value['ThanhTien'];
             }
         }
+        unset($_SESSION['productMe']);
         require_once('Views/indexview.php');
     }
 }

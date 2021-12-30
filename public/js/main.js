@@ -286,13 +286,14 @@ const App = {
     },
     startCount: function() {
         localStorage.setItem('timeLeft', JSON.stringify({
-            d: 15,
+            d: 1,
             h: 0,
             m: 0,
             s: 0,
         }))
     },
     start: function() {
+        this.startCount()
         this.sliderProducts('#owl-fruilt-slider')
         this.sliderProducts('#owl-slider-dry')
         this.sliderProducts('#product-sale-slider')
@@ -300,7 +301,6 @@ const App = {
         this.productDetailSlider()
         this.addCart()
         this.quantityCart()
-        this.startCount()
         console.log(this.arrayValueCheckbox)
     }  
 }

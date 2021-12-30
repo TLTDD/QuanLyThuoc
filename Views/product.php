@@ -25,10 +25,10 @@
                         <div class="nav-left__category">
                             <h1>Danh mục</h1>
                             <ul class="nav-left-category__list">
-                                <li class="category__item"><a href="">Trang chủ</a> </li>
+                                <li class="category__item"><a href="?act=home">Trang chủ</a> </li>
                                 <li class="category__item"><a href="">Sản phẩm</a></li>
-                                <li class="category__item"><a href="">bánh kẹo</a></li>
-                                <li class="category__item"><a href="">Đồ khô, gạo</a></li>
+                                <li class="category__item"><a href="">Chăm sóc cá nhân</a></li>
+                                <li class="category__item"><a href="">Thiết bị y tế</a></li>
                                 <li class="category__item"><a href="">Liên hệ</a></li>
                                 <li class="category__item"><a href="">Tin tức</a></li>
                                 <li class="category__item"><a href="">Hệ thống cửa hàng</a></li>

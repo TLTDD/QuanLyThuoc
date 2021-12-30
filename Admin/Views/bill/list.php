@@ -1,5 +1,5 @@
 <a href="?mod=bill&id=1" type="button" class="btn btn-primary">Đã duyệt</a>
-<a href="?mod=bill&id=0" type="button" class="btn btn-primary">Chưa duyệt</a>
+<a href="?mod=bill&id=0" type="button" class="btn btn-danger">Chưa duyệt</a>
 <?php if (isset($_COOKIE['msg'])) { ?>
   <div class="alert alert-success">
     <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
@@ -17,7 +17,7 @@
       <th scope="col">Địa chỉ</th>
       <th scope="col">SĐT</th>
       <th scope="col">Trạng thái</th>
-      <th>#</th>
+      <th>Thao tác</th>
     </tr>
   </thead>
   <tbody>
@@ -35,8 +35,9 @@
         }
         ?></td>
         <td>
-          <a href="?mod=bill&act=chitiet&id=<?= $row['MaHD'] ?>" class="btn btn-success" >Xem chi tiết</a>
-          <a href="?mod=bill&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" class="btn btn-danger">Xóa</a>
+          <a href="?mod=bill&act=chitiet&id=<?= $row['MaHD'] ?>&tt=<?=$row['TrangThai']?>" class="btn btn-success" >Xem chi tiết</a>
+          <a href="?mod=bill&act=delete&id=<?= $row['MaHD'] ?>" onclick="return confirm('Bạn có thật sự muốn xóa ?');" type="button" 
+          class="btn btn-danger <?php if($row['TrangThai']!=0) echo 'btn-remove-none';?>">Xóa</a>
         </td>
       </tr>
     <?php } ?>

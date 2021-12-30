@@ -21,18 +21,26 @@
     <div class="container">
       <div class="row">
         <div class="card mt-4 mb-4 col col-md-12">
-          <div class="card-header">Đơn hàng</div>
-          <div class="card-body">
-            <div class="chart-container pie-chart">
-              <canvas id="bar_chart"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="card mt-4 mb-4 col col-md-12">
           <div class="card-header">Doanh thu của năm</div>
           <div class="card-body">
             <div class="chart-container pie-chart">
               <canvas id="line_chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-4 mb-4 col col-md-12">
+          <div class="card-header">Đơn hàng</div>
+          <div class="card-body">
+            <div class="chart-container pie-chart">
+              <canvas id="circle_chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-4 mb-4 col col-md-12">
+          <div class="card-header">Top 5 sản phẩm bán chạy</div>
+          <div class="card-body">
+            <div class="chart-container pie-chart">
+              <canvas id="bar_chart"></canvas>
             </div>
           </div>
         </div>
@@ -47,6 +55,7 @@
 
   makechart();
   lineChart();
+  barChart();
 
   function makechart()
   {
@@ -98,7 +107,7 @@
           }
         };
 
-        var group_chart3 = $('#bar_chart');
+        var group_chart3 = $('#circle_chart');
 
         var graph3 = new Chart(group_chart3, {
           type:'doughnut',
@@ -109,9 +118,6 @@
     })
   }
 
-  function formatNumber(num) {
-    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
-  } 
   function lineChart() {
     $.ajax({
       url:"Views/login/doanhthu.php",
@@ -150,6 +156,50 @@
 				var group_chart4 = $('#line_chart')
 				var graph4 = new Chart(group_chart4, {
 					type:'line',
+					data:dataLine
+				});
+      }
+    })
+  }
+  function barChart() {
+    $.ajax({
+      url:"Views/login/spbanchay.php",
+      method:"POST",
+      data:{action:'fetch'},
+      dataType:"JSON",
+      success:function(data)
+      {
+        var TenSP = [];
+        var Tongsoluong = [];
+        console.log(data);
+        for(var count = 0; count < data.length; count++)
+        {
+          TenSP.push(data[count].TenSP);
+          Tongsoluong.push(data[count].Tongsoluong);
+        }
+
+        const dataLine = {
+					labels: TenSP,
+					datasets: [{
+						label: 'Số lần mua',
+						data: Tongsoluong,
+						backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
+						borderColor: 'rgb(75, 192, 192)',
+						tension: 0.1,
+            borderWidth: 1
+					}]
+				};
+				var group_chart4 = $('#bar_chart')
+				var graph4 = new Chart(group_chart4, {
+					type:'bar',
 					data:dataLine
 				});
       }
