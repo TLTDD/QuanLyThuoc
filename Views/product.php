@@ -1,6 +1,18 @@
 
-<?php if(isset($_GET['cate']) )
-        $cate = $_GET['cate'];?>
+<?php 
+    if(isset($_GET['cate']) && isset($_GET['loai'])){
+        $cate = $_GET['cate'];
+        $loai = '<input name="loaisp" type="text" 
+        hidden value="'.$_GET['loai'].'">';
+        $tenDm = $data_danhmuc[$cate -1]['TenDM'];
+        $tenLoai = ' / ' .$data_tenLSP[0]['TenLSP'];
+    }else {
+        $cate = $_GET['cate'];
+        $tenDm = $data_danhmuc[$cate -1]['TenDM'];
+        $tenLoai = '';
+        $loai = '';
+    }
+?>
 <section id="product">
     <div class="container">
         <div class="break-crumb">
@@ -13,7 +25,12 @@
                 </div>
                 <div>
                     <strong>
-                        <span id="danhmuc"><?php echo $data_danhmuc[$cate- 1]['TenDM'];?></span>
+                        <?= $loai ?>
+                        <span id="danhmuc">
+                            <?php 
+                                echo $tenDm. '' .$tenLoai;
+                            ?>
+                        </span>
                     </strong>
                 </div>
             </div>
@@ -197,7 +214,8 @@
                     <div class="product-list col-lg-9" >
                         <div class="container">
                             <div class="product-list__title row">
-                                <h1 id="product-list__title__h1" data-danhmuc="<?= $cate ?>"><?= $data_danhmuc[$cate -1]['TenDM'];?></h1>
+                                <h1 id="product-list__title__h1" data-danhmuc="<?= $cate ?>">
+                                </h1>
                             </div>
                         
                         <?php 
@@ -250,7 +268,7 @@
                                 <?php } }
                                 
                                 else 
-                                    echo "Không lấy dc dữ liệu";
+                                    echo "Chưa có sản phẩm nào";
                                 
                                 ?>
                                 
@@ -264,8 +282,6 @@
 
             </div>
         </div>
-
-
     </div>
     </div>
 </section>

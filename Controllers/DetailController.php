@@ -11,6 +11,7 @@ require_once("./Models/productModel.php");
         function list()
         {   
             $data_danhmuc = $this->product_model->danhmuc();
+            $data_loaisp = $this->product_model->loaisp_danhmuc();
             if(isset($_GET['sp']))
             {
                 $data_sanpham  = $this->product_model->sanpham($_GET['sp']);

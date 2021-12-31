@@ -10,7 +10,7 @@ require_once("./Models/newsModel.php");
         function list()
             {  
             $data_danhmuc = $this->news_model->danhmuc();
-            
+            $data_loaisp = $this->news_model->loaisp_danhmuc();
             require_once('./Views/indexview.php');  
         }
 

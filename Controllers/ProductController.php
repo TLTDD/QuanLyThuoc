@@ -12,6 +12,7 @@ require_once("./Models/productModel.php");
 
         {   
             $data_danhmuc = $this->product_model->danhmuc();
+            $data_loaisp = $this->product_model->loaisp_danhmuc();
             if(isset($_GET['sp'])) {
                 if(isset($_GET['sp']) && isset($_GET['km']))
                 {

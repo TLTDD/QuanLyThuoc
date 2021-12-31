@@ -40,7 +40,7 @@
                 <ul class="list-address">
                     <li>
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Xuân Thủy, Hà Nội, Vietnam</p>
+                        <p>Gio linh - Quang Tri</p>
                     </li>
                     <li>
                         <i class="fas fa-phone"></i>
@@ -102,7 +102,7 @@
         </div>
         <div class="row footer-bottom">
             <div class="col col-lg-7">
-                Bản quyền thuộc về <a href="" style="color:var(--cl-green);">Nhóm 2MPRO</a> Cung cấp bởi SAPA</div>
+                Bản quyền thuộc về <a href="" style="color:var(--cl-green);">Nhóm 2MPRO</a> Cung cấp bởi Pharmacity</div>
             <div class="col col-lg-5 footer-nav">
                 <ul>
                     <li><a href="">Trang chủ</a></li>

@@ -56,13 +56,13 @@
                         </div>
                         <div>
                             <span class="total-line__name">Phí vận chuyển</span>
-                            <span class="total-line__price">40.000đ</span>
+                            <span class="total-line__price"><?= number_format($phiship);?>đ</span>
                         </div>
                     </div>
                     <div class="order-summary__footer">
                         <div>
                             <span>Tổng cộng</span>
-                            <p class="sum-price"><?php echo number_format($count + 40000)?>đ</p>
+                            <p class="sum-price"><?php echo number_format($count)?>đ</p>
                         </div>
                     </div>
                 </div>

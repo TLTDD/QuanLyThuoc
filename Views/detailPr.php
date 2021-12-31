@@ -83,9 +83,16 @@
             </form>
         </div>
         <div class="col col-lg-3">
-            <a href="" class="product-detail-banner">
-                <img src="./public/images/banner_detail.webp" alt="">
-            </a>
+            <div class="delivery-method">
+                <p>Các hình thức giao hàng</p>
+                <p class="free-ship">
+                    <img src="https://www.pharmacity.vn/icons/star-green.svg" alt="">
+                    <span>Freeship cho đơn hàng từ 300k</span>
+                </p>
+            </div>
+            <div>
+                <img src="https://giamgiatructuyen.com/wp-content/uploads/2019/10/meo-mua-hang-mien-phi-ship-shopee-5.jpg" alt="" width="100%">
+            </div>
         </div>
     </div>
     <div class="row mb-5">

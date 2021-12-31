@@ -40,7 +40,8 @@ class PayModel extends Model
         $query = "INSERT INTO HoaDon($f) VALUES ($v);";
         $status = $this->conn->query($query);
         echo 'day la'.$status;
-    
+        // $queryUpdate = "UPDATE HoaDon SET TongTien = TongTien + 25000";
+        // $this->conn->query($queryUpdate);
         $query_mahd = "select MaHD from hoadon ORDER BY NgayLap DESC LIMIT 1";
         $data_mahd = $this->conn->query($query_mahd)->fetch_assoc();
     

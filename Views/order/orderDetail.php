@@ -144,7 +144,13 @@
                                     <tr class="order_summary ">
                                         <td colspan="">Phí vận chuyển</td>
                                         <td class="total money right">
-                                            40.000₫ 
+                                            <?php 
+                                                if($data_detail_order[0]['TongTien'] >=300000) {
+                                                    echo '0 đ';
+                                                }else {
+                                                    echo number_format(25000) .' đ';
+                                                }
+                                            ?>
                                         </td>
                                     </tr>
                                     <tr class="order_summary order_total">

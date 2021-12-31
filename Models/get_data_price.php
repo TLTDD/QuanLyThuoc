@@ -2,11 +2,16 @@
     require_once("connection.php");
     $mysqli = new mysqli("localhost","root","","data_medicine");
     $danhmuc = $_POST['danhmuc'];
+    $loai = $_POST['loai'];
     if(isset($_POST['listValue'])){
         $listValue = $_POST['listValue'];
         if(count($listValue) > 0){
             foreach ($listValue as $item){
-                $query = "SELECT * FROM danhmuc,khuyenmai, loaisanpham, sanpham, hinhanh WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and danhmuc.MaDM = '{$danhmuc}' and sanpham.DonGia between {$item} GROUP by sanpham.MaSP";
+                if($loai == 'null') {
+                    $query = "SELECT * FROM danhmuc,khuyenmai, loaisanpham, sanpham, hinhanh WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and danhmuc.MaDM = '{$danhmuc}' and sanpham.DonGia between {$item} GROUP by sanpham.MaSP";
+                }else {
+                    $query = "SELECT * FROM danhmuc,khuyenmai, loaisanpham, sanpham, hinhanh WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and loaisanpham.MaLSP = '{$loai}' and sanpham.DonGia between {$item} GROUP by sanpham.MaSP";
+                }
                 $result = $mysqli->query($query);
                 $row =  $result -> fetch_array(MYSQLI_ASSOC);
                 if($row){
@@ -57,7 +62,11 @@
             }
         } 
     }else {
-        $query = "SELECT * FROM danhmuc, loaisanpham, sanpham, hinhanh,khuyenmai WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and danhmuc.MaDM = '{$danhmuc}' and sanpham.DonGia GROUP by sanpham.MaSP";
+        if($loai == 'null') {
+            $query = "SELECT * FROM danhmuc, loaisanpham, sanpham, hinhanh,khuyenmai WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and danhmuc.MaDM = '{$danhmuc}' and sanpham.DonGia GROUP by sanpham.MaSP";
+        }else {
+            $query = "SELECT * FROM danhmuc, loaisanpham, sanpham, hinhanh,khuyenmai WHERE danhmuc.MaDM = loaisanpham.MaDM and sanpham.MaLSP = loaisanpham.MaLSP and hinhanh.masp = sanpham.MaSP and khuyenmai.MaKM = sanpham.MaKM and loaisanpham.MaLSP = '{$loai}' and sanpham.DonGia GROUP by sanpham.MaSP";
+        }
         $result = $mysqli->query($query);
         $row =  $result -> fetch_array(MYSQLI_ASSOC);
         if($row){

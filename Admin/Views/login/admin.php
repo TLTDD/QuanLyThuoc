@@ -21,7 +21,7 @@
     <div class="container">
       <div class="row">
         <div class="card mt-4 mb-4 col col-md-12">
-          <div class="card-header">Doanh thu của năm</div>
+          <div class="card-header">Doanh thu các tháng trong năm</div>
           <div class="card-body">
             <div class="chart-container pie-chart">
               <canvas id="line_chart"></canvas>

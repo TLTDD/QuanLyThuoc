@@ -16,6 +16,23 @@
             // echo $query;
             return $data;  
         }
+
+        function getChiTietSanPham($malsp) {
+            $query = "SELECT * from sanpham,loaisanpham,hinhanh,khuyenmai,danhmuc
+            WHERE sanpham.MaLSP = loaisanpham.MaLSP 
+                and khuyenmai.MaKM = sanpham.MaKM 
+                and hinhanh.masp = sanpham.MaSP 
+                and danhmuc.maDM = loaisanpham.maDM 
+                and loaisanpham.MaLSP = $malsp";
+            require("result.php");
+            return $data;
+        }
+
+        function getTenLoaiSP($malsp) {
+            $query = "SELECT * from loaisanpham where MaLSP = $malsp";
+            require("result.php");
+            return $data;
+        }
         function sanpham_khuyenmai() {
             $query = "SELECT * FROM khuyenmai, sanpham,hinhanh WHERE khuyenmai.MaKM = sanpham.MaKM and khuyenmai.GiaTriKM != 0 AND sanpham.MaSP = hinhanh.masp
             GROUP by sanpham.MaSP";
@@ -35,13 +52,6 @@
             $query ="SELECT * from sanpham,hinhanh,khuyenmai where sanpham.MaSP = hinhanh.masp and khuyenmai.MaKM = sanpham.MaKM and sanpham.MaSP = '$masp'";
             require("result.php");
             return $data;
-        }
-        public function loaisp_danhmuc($danhmuc)
-        {
-            $query ="SELECT * from danhmuc, loaisanpham
-                     where danhmuc.MaDM = loaisanpham.MaDM";
-            require("result.php");
-            return $data; 
         }
         function searchData($key) {
             $query = "SELECT * FROM sanpham, hinhanh,khuyenmai WHERE sanpham.MaSP = hinhanh.masp and sanpham.MaKM = khuyenmai.MaKM and TenSP LIKE '$key%' GROUP by sanpham.MaSP";

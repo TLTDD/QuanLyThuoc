@@ -30,6 +30,13 @@ class PayController
             foreach ($_SESSION['productMe'] as $value) {
                 $count += $value['ThanhTien'];
             }
+            if($count >=300000) {
+                $phiship = 0;
+                $count = $count;
+            }else {
+                $phiship = 25000;
+                $count = $count + 25000;
+            }
         }
         if(isset($_POST['submit'])) {
             // $diachi =  $_POST['diachi'];
@@ -54,7 +61,7 @@ class PayController
             'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
             'ghiChu' => $ghichu,
-            'TongTien' => ($count + 40000),
+            'TongTien' => ($count),
             'TrangThai'  =>  '0',
         );
         $this->pay_model->save($data);
@@ -62,7 +69,7 @@ class PayController
     function order_complete()
     {
         $data_danhmuc = $this->pay_model->danhmuc();
-
+        $data_loaisp = $this->pay_model->loaisp_danhmuc();
         $data_chitietDM = array();
 
         for ($i = 1; $i <= count($data_danhmuc); $i++) {
@@ -72,6 +79,13 @@ class PayController
         if (isset($_SESSION['productMe'])) {
             foreach ($_SESSION['productMe'] as $value) {
                 $count += $value['ThanhTien'];
+            }
+            if($count >=300000) {
+                $phiship = 0;
+                $count = $count;
+            }else {
+                $phiship = 25000;
+                $count = $count + 25000;
             }
         }
         unset($_SESSION['productMe']);

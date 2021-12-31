@@ -13,7 +13,7 @@ class LoginController
         {   
             // data_danhmuc để gọi lại thanh nav .  :v
             $data_danhmuc = $this->login_model->danhmuc();
-           
+            $data_loaisp = $this->login_model->loaisp_danhmuc();
             if(isset($_GET['iduser']))
             {   
                
@@ -34,7 +34,7 @@ class LoginController
     {
        
         $data_danhmuc = $this->login_model->danhmuc();
-
+        $data_loaisp = $this->login_model->loaisp_danhmuc();
         require_once('Views/indexview.php');
     }
     function login_action()
@@ -54,13 +54,14 @@ class LoginController
 
     function dangky(){
         $data_danhmuc = $this->login_model->danhmuc();
+        $data_loaisp = $this->login_model->loaisp_danhmuc();
         require_once("Views/indexview.php");
     }
     
     function dangky_action()
     {
         $data_danhmuc = $this->login_model->danhmuc();
-
+        $data_loaisp = $this->login_model->loaisp_danhmuc();
         $check1 = 0;
         $check2 = 0;
         $data_check = $this->login_model->check_account();
@@ -101,6 +102,7 @@ class LoginController
     function account()
     {   
         $data_danhmuc = $this->login_model->danhmuc();
+        $data_loaisp = $this->login_model->loaisp_danhmuc();
         $data = $this->login_model->account();
         //$this->list();
         require_once('Views/indexview.php');

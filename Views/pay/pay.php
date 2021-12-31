@@ -101,12 +101,19 @@
                     $soluong +=1;
                     $thanhtien +=$value['ThanhTien'];
                 }}
+                if($thanhtien >=300000) {
+                    $thanhtien = $thanhtien;
+                    $phiship = 0;
+                }else {
+                    $phiship = 25000;
+                    $thanhtien = $thanhtien;
+                }
             ?>
                 <div class="layout-flex">
                     <h2>Vận chuyển</h2>
                     <div class="wrapper-transport">
                         <span>Giao hàng tận nơi</span>
-                        <span style="padding-right: 20px; color: red; font-weight: bold;">40.000đ</span>
+                        <span style="padding-right: 20px; color: red; font-weight: bold;"><?= number_format($phiship);?>đ</span>
                     </div>
                 </div>
                 <div class="layout-flex">
@@ -134,12 +141,12 @@
                             <?php foreach ($_SESSION['productMe'] as $value) {?>
                             <li class="pad-order__item">
                                 <div class="pad-order__item-img">
-                                    <img src="./public/images/<?php echo $value['hinhanh']?>" alt="">
+                                    <img src="./public/images/<?php echo $value['hinhanh']?>" title="<?php echo $value['TenSP'] ?>">
                                     <span class="count-product">
                                         <?php echo number_format($value['soluong'])?>
                                     </span>
                                 </div>
-                                <span class="pad-order__item-name">
+                                <span class="pad-order__item-name" title="<?php echo $value['TenSP'] ?>">
                                     <?php echo $value['TenSP'] ?>
                                 </span>
                                 <span class="pay-order__item-price">
@@ -158,12 +165,12 @@
                         </div>
                         <div class="pay-order__total-wrapper">
                             <span>Phí vận chuyển</span>
-                            <span>40.000đ</span>
+                            <span><?= number_format($phiship);?>đ</span>
                         </div>
                         <div class="pay-order__total-wrapper" style="border-top: 1px solid #ccc;">
                             <span>Tổng cộng</span>
                             <h2 class="pay-total__sum">
-                            <?php echo number_format($thanhtien+40000); ?> đ
+                            <?php echo number_format($thanhtien+$phiship); ?> đ
                             </h2>
                         </div>
                     </div>

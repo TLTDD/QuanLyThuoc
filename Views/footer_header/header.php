@@ -153,7 +153,7 @@
                                 <li>
                                     <div class="user">
                                         <!-- Ví dụ id user = 1 / đợi Huy đăng nhập sửa sau ::@@ -->
-                                        <a href="">
+                                        <a href="?act=taikhoan&xuli=account">
                                             <i class="fas fa-user"></i>
                                         </a>
                                         <div class="group-login">
@@ -201,15 +201,14 @@
                 <i class="fas fa-chevron-down"></i>
                 <ul class="nav-item__down">
                     <?php foreach($data_danhmuc as $row) { ?>
-
                             <li class="nav-item__down-item">
-                                <a href="?act=product&cate=<?=$row['MaDM'] ?>"><?=$row['TenDM']?>
+                                <a href="?act=product&cate=<?=$row['MaDM'] ?>">
+                                    <?=$row['TenDM']?>
+                                    <i class="fas fa-chevron-right"></i>
                                 </a>
+                                <?php recursiveMenu($data_loaisp,$row['MaDM']) ?>
                             </li>
-
                             <?php  } ?>
-                    
-                    
                 </ul>
             </li>
             <li class="nav-list__item"><a class="nav-list__item-link" href="?act=product&cate=3">Chăm sóc cá nhân</a></li>
@@ -219,3 +218,19 @@
         </ul>
     </div>
 </nav>
+<?php 
+function recursiveMenu($data, $parent_id, $sub=true){
+    echo '<ul class="nav-list__down">';
+    foreach ($data as $key => $item) {
+         if($item['MaDM'] == $parent_id){
+            unset($data[$key]);
+          ?>    
+     <li>
+      <a href="?act=product&cate=<?=$item['MaDM']?>&loai=<?=$item['MaLSP']?>">
+          <?php echo $item['TenLSP']?>
+      </a>
+     </li>
+        <?php }} 
+     echo "</ul>";
+}
+?>
