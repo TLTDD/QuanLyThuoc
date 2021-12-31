@@ -53,6 +53,7 @@ class PayController
                 $_SESSION['login2']['DiaChi'] = $diachi;
             }
             $ghichu = $_POST['ghichu'];
+            $httt = $_POST['httt'];
         }
         $data = array(
             'MaND' => $_SESSION['login2']['MaND'],
@@ -60,6 +61,7 @@ class PayController
             'NguoiNhan' => $_SESSION['login2']['Ho'].' '. $_SESSION['login2']['Ten'],
             'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
+            'PhuongThucTT'=> $httt,
             'ghiChu' => $ghichu,
             'TongTien' => ($count),
             'TrangThai'  =>  '0',
@@ -70,11 +72,14 @@ class PayController
     {
         $data_danhmuc = $this->pay_model->danhmuc();
         $data_loaisp = $this->pay_model->loaisp_danhmuc();
+        $data_hoadon = $this->pay_model->getHoaDon();
         $data_chitietDM = array();
 
         for ($i = 1; $i <= count($data_danhmuc); $i++) {
             $data_chitietDM[$i] = $this->pay_model->chitietdanhmuc($i);
         }
+
+        
         $count = 0;
         if (isset($_SESSION['productMe'])) {
             foreach ($_SESSION['productMe'] as $value) {
@@ -88,7 +93,7 @@ class PayController
                 $count = $count + 25000;
             }
         }
-        unset($_SESSION['productMe']);
+        // unset($_SESSION['productMe']);
         require_once('Views/indexview.php');
     }
 }

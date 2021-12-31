@@ -65,4 +65,5 @@ class PayModel extends Model
             header('location: ?act=pay');
         }
       }
+
 }

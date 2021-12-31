@@ -1,5 +1,4 @@
 <main>
-<!--  -->
     <div class="container">
         <div class="row">
             <div class="col col-lg-7 col-md-7">
@@ -27,7 +26,9 @@
                         </div>
                         <div>
                             <h2>Phương thức thanh toán</h2>
-                            <span>Thanh toán khi giao hàng (COD)</span>
+                            <span>
+                                <?php echo $data_hoadon[0]['PhuongThucTT']; ?>
+                            </span>
                         </div>
                     </div>
                     <div class="order-complete__content-right">

@@ -1571,7 +1571,13 @@ div.wrapper-count {
 .pay-head {
     margin-bottom: 30px;
 }
-
+.wrapper-pay__cod.wrapper-pay__cod--active {
+    background: aliceblue;
+    font-weight: bolder;
+}
+.wrapper-pay__cod {
+    cursor: pointer;
+}
 .wrapper-transport,.wrapper-pay__cod {
     padding: 20px 0 20px 5px;
     border: 1px solid #ccc;

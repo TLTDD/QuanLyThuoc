@@ -10,7 +10,17 @@
             <span>Thông tin nhận hàng</span>
         </div>
     </div>
-
+    <?php
+        if(isset($_GET['httt'])){
+            $class =  'wrapper-pay__cod--active';
+            $param = '&httt=paypal';
+            $httt = 'Thanh toán PayPal';
+        }else {
+            $httt = 'Thanh toán khi giao hàng(COD)';
+            $param = '';
+            $class = '';
+        }
+    ?>
     <form action="?act=pay&xuli=saved" method="POST">
         <div class="row">
             <div class="col-lg-4">
@@ -103,10 +113,12 @@
                 }}
                 if($thanhtien >=300000) {
                     $thanhtien = $thanhtien;
+                    $tongTien = $thanhtien;
                     $phiship = 0;
                 }else {
                     $phiship = 25000;
                     $thanhtien = $thanhtien;
+                    $tongTien = $thanhtien + $phiship;
                 }
             ?>
                 <div class="layout-flex">
@@ -117,18 +129,22 @@
                     </div>
                 </div>
                 <div class="layout-flex">
+                    <input type="text" hidden name="httt" 
+                    value="<?php echo $httt;?>">
                     <h2>Thanh toán</h2>
-                    <div class="wrapper-pay__cod wrapper-pay__cod--active">
+                    <div class="wrapper-pay__cod">
                         <span>Thanh toán khi giao hàng(COD)</span>
                         <i class="fas fa-hand-holding-usd"></i>
                     </div>
-                    <!-- <div class="wrapper-pay__cod">
-                        <a href="" class="btn-paypel">Thanh toán bằng paypal</a>
+                    <div class="wrapper-pay__cod <?= $class ?>">
+                        <div id="paypal-payment-button">
+
+                        </div>
                     </div>
-                    <div class="pay-error__note">
+                    <!-- <-- <div class="pay-error__note">
                         <p>*Xin lỗi tính năng này chưa hoàn thành</p>
                         
-                    </div> -->
+                    </div> --> 
                 </div>
             </div>
             <div class="col-lg-4">
@@ -170,7 +186,7 @@
                         <div class="pay-order__total-wrapper" style="border-top: 1px solid #ccc;">
                             <span>Tổng cộng</span>
                             <h2 class="pay-total__sum">
-                            <?php echo number_format($thanhtien+$phiship); ?> đ
+                            <?php echo number_format($tongTien); ?> đ
                             </h2>
                         </div>
                     </div>
@@ -181,7 +197,14 @@
                             Quay lại giỏ hàng
                         </a>
                         <div class="pay-order__button">
-                            <button class="pay-order__button-check" type="submit" name="submit">Đặt hàng</button>
+                            <button class="pay-order__button-check" type="submit" name="submit">
+                                <?php
+                                    if(isset($_GET['httt']))
+                                        echo 'Tiếp tục';
+                                    else   
+                                        echo 'Đặt hàng';
+                                ?>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -245,5 +268,42 @@
             this.classList.add('btn-address-active');
             boxAddress.innerHTML = htmls
         })
+
+        let btnshipCode = document.querySelector('.wrapper-pay__cod')
+        btnshipCode.addEventListener('click',function(){
+            this.classList.toggle('wrapper-pay__cod--active')
+        })
+
     })()
+</script>
+
+<script src="https://www.paypal.com/sdk/js?client-id=ASeCL6z6pcwYPaH7prTwln5MPRgwnQW0UVXJFJ1-0_YYF24hTSIKWF87hqQxKC7LkYGxPVBwRUSn71_B&disable-funding=credit,card"></script>
+<script>
+    var thanhtien = '<?php echo $tongTien ?>';
+    var thanhtienviet = thanhtien/22855
+    var value = parseFloat(thanhtienviet).toFixed(2);
+
+    paypal.Buttons({
+        style : {
+            color: 'blue',
+            shape: 'pill'
+        },
+        createOrder: function (data, actions) {
+            return actions.order.create({
+                purchase_units : [{
+                    amount: {
+                        value: value
+                    }
+                }]
+            });
+        },
+        onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+                window.location.replace("http://localhost/%c4%90%e1%bb%93%20%c3%a1n%20TH%20WEB/QuanLyThuoc/?act=pay&httt=paypal")
+            })
+        },
+        onCancel: function (data) {
+            window.location.replace("http://localhost/%c4%90%e1%bb%93%20%c3%a1n%20TH%20WEB/QuanLyThuoc/?act=pay")
+        }
+    }).render('#paypal-payment-button');
 </script>
