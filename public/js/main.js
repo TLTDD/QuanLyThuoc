@@ -296,6 +296,7 @@ const App = {
         this.startCount()
         this.sliderProducts('#owl-fruilt-slider')
         this.sliderProducts('#owl-slider-dry')
+        this.sliderProducts('#owl-slider__top')
         this.sliderProducts('#product-sale-slider')
         this.eventDom()
         this.productDetailSlider()

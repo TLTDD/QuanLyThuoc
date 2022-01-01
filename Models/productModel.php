@@ -64,5 +64,16 @@
             require("result.php");
             return $data;
         }
+
+        function getSanPhamBanChay() {
+            $query = "SELECT sanpham.TenSP,sanpham.MaSP, SUM(chitiethoadon.SoLuong) as Tongsoluong
+            from sanpham, chitiethoadon
+            where sanpham.MaSP = chitiethoadon.MaSP
+            group by sanpham.TenSP
+            order by Tongsoluong desc
+            LIMIT 10";
+            require("result.php");
+            return $data;
+        }
     }
 ?>

@@ -171,6 +171,62 @@
         </div>
     </div>
 </section>
+<section id="product-top">
+    <div class="container">
+        <div class="populator__head">
+            <div>
+                <h2 class="populator__head-title">
+                    Top sản phẩm bán chạy
+                </h2>
+            </div>
+        </div>
+        <div class="owl-carousel owl-theme" id="owl-slider__top">
+            <?php 
+                for ($i = 0; $i < (count($data_arr_topsp)); $i++) {
+                    // print_r($data_arr_topsp[$i][0]['TenSP']);
+                    if ($data_arr_topsp[$i][0]['GiaTriKM'] == 0) {
+                        $status = "product-item__sale-off--none";
+                        $km = "no";
+                        $makm = "";
+                    }
+                    else {
+                        $status = "";
+                        $makm = "&km=" .$data_arr_topsp[$i][0]['GiaTriKM'];
+                    }
+                    ?>
+                     <div class="col-product__item sale-home <?= $status?>">
+                        <form action="" >
+                            <div>
+                            <div class="product-item__sale-off <?= $status?>">
+                                <span class="home-product-item__percent"><?php echo $data_arr_topsp[$i][0]['GiaTriKM'] ?>%</span>
+                                <label class ="home-product-item__label" for="">Giảm</label>
+                            </div>
+                            <a href="">
+                                <i data-heart="<?php echo $data_arr_topsp[$i][0]['MaSP'] ?>"  class="icon-heart-element product-item-icon far fa-heart"></i>
+                            </a>
+                            </div>
+                            <div class="product-img">
+                                <a href="?act=detail&sp=<?=$data_arr_topsp[$i][0]['MaSP']?><?= $makm ?>" style="display: block;">
+                                    <span class ="img--hover"></span> 
+                                    <img src="./public/images/<?php echo $data_arr_topsp[$i][0]['hinhanh'] ?>" alt="">
+                                </a>
+                                <p class="text-sale">Sale</p>
+                            </div>
+                            <div class="product-fruits__infos">
+                                <h2 class="tilte-name-product"><?= $data_arr_topsp[$i][0]['TenSP']?></h2>
+                                <div>
+                                <span class="price-new"><?= number_format( $data_arr_topsp[$i][0]['DonGia']) ?>đ</span>
+                                <a href="?act=cart&xuli=add&id=<?=$data_arr_topsp[$i][0]['MaSP']?>" class="button-add-product button-add-product btn-add-cart button-add-product--view">Cho vào giỏ</a>
+                                <span class="price-old"><?php echo number_format($data_arr_topsp[$i][0]['giaCu']) ?>đ</span>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            <?php }?>
+        </div>
+    </div>
+</section>
 <section id="product-fruits">
     <div class="container">
         <div class="populator__head">

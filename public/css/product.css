@@ -304,7 +304,7 @@ span.filter__conterner__title-head {
 }
 li.filter-container__selected-filter-item span {
     color: #fff;
-    background: var(--cl-green);
+    background: var(--cl-blue);
     padding: 8px 10px;
     border-radius: 5px;
 }

@@ -29,6 +29,8 @@
     <script src="./public/js/jquery.js"></script>
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0" nonce="PUHtliq5"></script>
     <?php
     require_once("footer_header/header.php");
     ?>

@@ -55,7 +55,7 @@
     line-height: 1.4;
     margin: 0;
     max-height: 38px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .blog-aside .blog-list .loop-blog {
@@ -137,4 +137,41 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     word-break: break-word;
+}
+
+h1.content-news__title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.border {
+    background: var(--cl-blue);
+    width: 200px;
+    display: block;
+    height: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.BlogDetail_blog-content__HgHs7 p,
+.BlogDetail_blog-content__HgHs7 li {
+    line-height: 1.6;
+}
+.BlogDetail_blog-content__HgHs7{
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.BlogDetail_blog-content__HgHs7 p strong,
+.BlogDetail_blog-content__HgHs7 h2,
+.BlogDetail_blog-content__HgHs7 h2 strong{
+    padding: 10px 0px;
+    display: block;
+    line-height: 1.6;
+}
+
+.BlogDetail_blog-content__HgHs7 li {
+    list-style: circle;
+}
+.BlogDetail_blog-content__HgHs7 ul {
+    padding: 5px 20px;
 }

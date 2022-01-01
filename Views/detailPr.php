@@ -110,6 +110,15 @@
             </div>
         </div>
     </div>
+    <div class="about-author">
+        <!-- comments -->
+        <div class="post-comments">
+            <!-- comment -->
+            <div class="fb-comments" data-href="https://dxdbloger.000webhostapp.com?act=detail&id=<?= $data_sanpham[0]['TenSP']; ?>" data-numposts="5" data-width=""></div>
+            <!-- /comment -->
+        </div>
+        <!-- /comments -->
+    </div>
 
     <section id="product-dry">
         <div class="container">
