@@ -90,7 +90,7 @@
             }
             break;
         case "news":
-            $act = isset($_GET['chitiet']) ? $_GET['chitiet'] : 'chitiettin';
+            $act = isset($_GET['chitiet']) ? $_GET['chitiet'] : 'list';
             // echo $act;
             switch ($act) {
                 case 'list':

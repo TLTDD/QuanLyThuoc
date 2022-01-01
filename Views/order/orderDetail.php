@@ -145,17 +145,14 @@
                                         <td colspan="">Phí vận chuyển</td>
                                         <td class="total money right">
                                             <?php 
-                                                if($data_detail_order[0]['TongTien'] >=300000) {
-                                                    echo '0 đ';
-                                                }else {
-                                                    echo number_format(25000) .' đ';
-                                                }
-                                            ?>
+                                                echo number_format($data_detail_order[0]['phiShip']);
+                                            ?> đ
                                         </td>
                                     </tr>
                                     <tr class="order_summary order_total">
                                         <td>Tổng tiền</td>
-                                        <td class="right"><strong style="color:#CA170E;font-size:19px;"><?php echo number_format($data_detail_order[0]['TongTien']) ?>₫</strong></td>
+                                        <td class="right"><strong style="color:#CA170E;font-size:19px;">
+                                        <?php echo number_format($data_detail_order[0]['TongTien'] + $data_detail_order[0]['phiShip']) ?>₫</strong></td>
                                     </tr>     
                                 </tfoot>
                             </table>

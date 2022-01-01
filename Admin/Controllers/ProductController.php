@@ -128,8 +128,9 @@ class ProductController
             date_default_timezone_set('Asia/Ho_Chi_Minh');
             $ThoiGian =  date('Y-m-d H:i:s');
             $giaCu =  $_POST['DonGia']+30000;
+            echo $_POST['MaSP'];
             $data_sanpham = array(
-                'MASP' => $_POST['MaSP'],
+                'MaSP' => $_POST['MaSP'],
                 'MaLSP' =>  $_POST['MaLSP'],
                 'TenSP'  =>   $_POST['TenSP'],
                 'DonGia' => $_POST['DonGia'],
@@ -144,7 +145,7 @@ class ProductController
             $masp = $_POST['MaSP'];
             $this->product_model->updateProduct($data_sanpham);
     
-            //echo "<script>console.log($this->idsp)</script>";
+            // echo "<script>console.log($this->idsp)</script>";
     
             $data_img = array(
                 "hinhanh1" => $hinhAnh1,

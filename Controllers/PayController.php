@@ -33,10 +33,8 @@ class PayController
             }
             if($count >=300000) {
                 $phiship = 0;
-                $count = $count;
             }else {
                 $phiship = 25000;
-                $count = $count + 25000;
             }
         }
         if(isset($_POST['submit'])) {
@@ -63,6 +61,7 @@ class PayController
             'SDT' => $_SESSION['login2']['SDT'],
             'DiaChi' => $diachi,
             'PhuongThucTT'=> $httt,
+            'phiShip' => $phiship,
             'ghiChu' => $ghichu,
             'TongTien' => ($count),
             'TrangThai'  =>  '0',
@@ -80,22 +79,7 @@ class PayController
         for ($i = 1; $i <= count($data_danhmuc); $i++) {
             $data_chitietDM[$i] = $this->pay_model->chitietdanhmuc($i);
         }
-
-        
-        $count = 0;
-        if (isset($_SESSION['productMe'])) {
-            foreach ($_SESSION['productMe'] as $value) {
-                $count += $value['ThanhTien'];
-            }
-            if($count >=300000) {
-                $phiship = 0;
-                $count = $count;
-            }else {
-                $phiship = 25000;
-                $count = $count + 25000;
-            }
-        }
-        // unset($_SESSION['productMe']);
+        unset($_SESSION['productMe']);
         require_once('Views/indexview.php');
     }
 }

@@ -53,17 +53,19 @@
                     <div class="order-summary__content">
                         <div>
                             <span class="total-line__name">Tạm tính</span>
-                            <span class="total-line__price"><?php echo number_format($count); ?>đ</span>
+                            <span class="total-line__price">
+                                <?php echo number_format($data_hoadon[0]['TongTien']); ?>đ
+                            </span>
                         </div>
                         <div>
                             <span class="total-line__name">Phí vận chuyển</span>
-                            <span class="total-line__price"><?= number_format($phiship);?>đ</span>
+                            <span class="total-line__price"><?= number_format($data_hoadon[0]['phiShip']);?>đ</span>
                         </div>
                     </div>
                     <div class="order-summary__footer">
                         <div>
                             <span>Tổng cộng</span>
-                            <p class="sum-price"><?php echo number_format($count)?>đ</p>
+                            <p class="sum-price"><?php echo number_format($data_hoadon[0]['TongTien']+$data_hoadon[0]['phiShip']); ?>đ</p>
                         </div>
                     </div>
                 </div>

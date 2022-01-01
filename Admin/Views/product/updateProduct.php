@@ -3,8 +3,8 @@
       
     ?>
     <form class="add-product-form"action="?mod=sanpham&act=update" method="POST" enctype="multipart/form-data">
-    <input type="hidden" id="MaSP" value="<?= $data['MaSP'] ?>">
-    <input type="hidden" id="idtype" value="<?= $data['MaLSP'] ?>">
+    <input type="hidden" id="MaSP" value="<?= $data['MaSP'] ?>" name="MaSP">
+    <input type="hidden" id="idtype" value="<?= $data['MaLSP'] ?> name="idtype">
     <?php if (isset($_COOKIE['msg'])) { ?>
     <div class="alert alert-warning">
       <strong>Thông báo</strong> <?= $_COOKIE['msg'] ?>
@@ -81,9 +81,7 @@
         <label>Mô tả</label>
         <input class="form-control" type="text" name="" id="">
     </fieldset>
-    <button  class ="btn-addproduct"> Thêm </button>
-    
-   
+    <button  class ="btn-addproduct"> Cập nhật</button>
 </form>
 <script>
     $(document).ready(function() {

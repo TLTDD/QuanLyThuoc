@@ -39,7 +39,10 @@
                                 </th>
                                 <th><?= $item['NgayLap']?></th>
                                 <th><?= $item['DiaChi']?></th>
-                                <th><?php echo number_format($item['TongTien'])?> đ</th>
+                                <th>
+                                    <?php echo number_format($item['TongTien']+$item['phiShip'])?> 
+                                    đ
+                                </th>
                                 <th>
                                     <?php if($item['TrangThai'] == 1)
                                             echo 'Đã xác nhận';

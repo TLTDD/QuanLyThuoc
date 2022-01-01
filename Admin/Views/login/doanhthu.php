@@ -8,10 +8,11 @@ if(isset($_POST["action"]))
 {
 	if($_POST["action"] == 'fetch')
 	{
+		$year = $_POST['selectedYear'];
 		$data_list = array();
 		for($i = 1 ; $i<=12 ;$i++) {
             $query = "
-            SELECT MONTH(NgayLap) as MONTH,SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayLap) = $i And TrangThai = 1
+            SELECT MONTH(NgayLap) as MONTH,SUM(TongTien) as Count FROM HoaDon WHERE MONTH(NgayLap) = $i And YEAR(NgayLap)= $year and TrangThai = 1
             ";
 			$result = $connect->query($query);
 			$data = array();

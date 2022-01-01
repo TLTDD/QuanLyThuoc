@@ -70,7 +70,7 @@
         }
         $v = trim($v, ",");
 
-        $query = "UPDATE $this->table SET  $v   WHERE $this->contens = ".$data['MASP'];
+        $query = "UPDATE $this->table SET  $v   WHERE $this->contens = ".$data['MaSP'];
         $result = $this->conn->query($query);
         
         if ($result == true) {
@@ -78,7 +78,7 @@
             header('Location: ?mod=' . $this->table);
         } else {
             setcookie('msg', $query, time() + 2);
-            header('Location: ?mod=' . $this->table . '&act=edit&idsp=' . $data['id']['id']);
+            header('Location: ?mod=' . $this->table . '&act=edit&idsp=' . $data['MaSP']['MaSP']);
         }
     }
     function issetImgName($idsp, $imgName){
