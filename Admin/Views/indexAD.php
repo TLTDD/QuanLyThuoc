@@ -104,6 +104,25 @@
                             break;
                         }
                         break;
+                        case 'banner':
+                          switch ($act) {
+                            case 'list':
+                              require_once('Views/banner/list.php');
+                              break;
+                            case 'add':
+                              require_once('Views/banner/add.php');
+                              break;
+                            case 'detail':
+                              require_once('Views/banner/detail.php');
+                              break;
+                            case 'edit':
+                              require_once('Views/banner/edit.php');
+                              break;
+                            default:
+                              require_once('Views/banner/list.php');
+                              break;
+                          }
+                          break;
                         case 'category':
                           switch ($act) {
                             case 'list':

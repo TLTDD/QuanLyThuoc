@@ -204,6 +204,36 @@ session_start();
                     break;
             }
             break;
+            case 'banner':
+                require_once('Controllers/BannerController.php');
+                $controller_obj = new BannerController();
+                switch ($act) {
+                    case 'list':
+                        $controller_obj->list();
+                        break;
+                    case 'delete':
+                        $controller_obj->delete();
+                        break;
+                    case 'add':
+                        $controller_obj->add();
+                        break;
+                    case 'edit':
+                        $controller_obj->edit();
+                        break;
+                    case 'store':
+                        $controller_obj->store();
+                        break;
+                    case 'detail':
+                        $controller_obj->detail();
+                        break;
+                    case 'update':
+                        $controller_obj->update();
+                        break;
+                    default:
+                        $controller_obj->list();
+                        break;
+                    }
+                break;
         default:
         header('location: ?mod=bill');
         }

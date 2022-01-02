@@ -8,7 +8,7 @@
                             ?>
                             <li class="slider-list__item">
                                 <a href="">
-                                    <img src="./public/images/<?php echo $banner['HinhAnh'] ?>" alt="">
+                                    <img src="./public/<?php echo $banner['HinhAnh'] ?>" alt="">
                                 </a>
                             </li>
                         <?php } ?>

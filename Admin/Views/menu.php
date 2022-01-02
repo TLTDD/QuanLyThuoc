@@ -94,6 +94,17 @@
             <?php
                 if(isset($_SESSION['isLogin2_Admin'])){ ?>
                 <li>
+                    <a class="has-arrow" href="?mod=banner" aria-expanded="true">
+                        <div class="icon_menu">
+                            <i class="far fa-image"></i>
+                            <span>Quản lý banner</span>
+                        </div>
+                    </a>
+                </li>
+            <?php } ?>
+            <?php
+                if(isset($_SESSION['isLogin2_Admin'])){ ?>
+                <li>
                     <a class="has-arrow" href="?mod=login" aria-expanded="true">
                         <div class="icon_menu">
                             <i class="fas fa-balance-scale-left"></i>
