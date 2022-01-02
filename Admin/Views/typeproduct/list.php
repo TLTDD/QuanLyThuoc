@@ -1,4 +1,4 @@
-<?php if (isset($_SESSION['isLogin_Admin']) && $_SESSION['isLogin_Admin'] == true) { ?>
+<?php if (isset($_SESSION['isLogin2_Admin']) && $_SESSION['isLogin2_Admin'] == true) { ?>
 <a href="?mod=loaisanpham&act=add" type="button" class="btn btn-primary">Thêm mới</a>
 <?php } ?>
 
